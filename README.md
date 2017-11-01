@@ -9,6 +9,9 @@ http://lepidllama.net/blog/how-to-push-an-existing-cloud9-project-to-github/
 
 Cloud 9 introduced by Shogo Arao, implemented and pushed on 30/10/2017
 
+Must add files to index/staging first:
+git add .
+
 Didn't add in SSH keychain into github but cloud9 seems to be able to push.
 
 Needs to commit first before pushing change. Need to add commit message:
