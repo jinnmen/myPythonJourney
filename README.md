@@ -31,3 +31,6 @@ or git push
 Switching/toggling https to ssh
 https://help.github.com/articles/changing-a-remote-s-url/
 
+Backslash on j keyboard is "option + ¥ "
+On macbook pro its fn + /
+
