@@ -9,6 +9,9 @@ http://lepidllama.net/blog/how-to-push-an-existing-cloud9-project-to-github/
 
 Cloud 9 introduced by Shogo Arao, implemented and pushed on 30/10/2017
 
+You can merge existing github files/folders with cloud 9 :
+github pull
+
 Save your file in cloud 9 first.
 
 Must add files to index/staging first:
