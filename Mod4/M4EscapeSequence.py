@@ -41,4 +41,7 @@ def pre_word():
         print("False")
     return
 
-pre_word()
+#pre_word()
+
+# [ ] review, run, fix
+print("Hello\nWorld!")
