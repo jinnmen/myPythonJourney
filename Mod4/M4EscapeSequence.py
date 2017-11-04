@@ -27,4 +27,18 @@ print("\"What's that?\" isn\'t a specific question")
 # Four    Five    Six
 print("One\tTwo\tThree\nFour\tFive\tSix")
 
+word1="pre"
 
+def pre_word():
+    word_pre=input("enter any word")
+   
+    if word_pre.isalpha()==True:
+        if word1 in word_pre.lower():
+            print("true")
+        else:
+            print("false")
+    else:
+        print("False")
+    return
+
+pre_word()
