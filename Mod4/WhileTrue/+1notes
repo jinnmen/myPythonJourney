@@ -1,0 +1,12 @@
+Concept: Variable Increment
+
+Incrementing a variable
+
+Incrementing
+
+votes = votes + 1     or   votes += 1
+
+Decrementing (negative incrementing)
+
+votes = votes - 1     or   votes -= 1
+
