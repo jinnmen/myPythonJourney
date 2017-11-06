@@ -1,26 +1,27 @@
-seat_count=0
-soft_seats=0
-hard_seats=0
-num_seats=4
-
-# loops tallying seats using soft pads vs hard, until seats full or user "exits"
+shirt_count=0
+size_s=0
+size_m=0
+size_l=0
+total_size=4
 
 while True:
-    seat_type=input('enter seat type of "hard", "soft" or "exit"(to finish): ')
+    shirt_type=input("enter shirt size you'd like to buy(s/m/l) or 'exit' to quit: ")
     
-    if seat_type.lower().startswith('e'):
+    if shirt_type.lower().startswith('e'):
         print()
         break
-    elif seat_type.lower()=="hard":
-        hard_seats +=1
-    elif seat_type.lower()=="soft":
-        soft_seats +=1
+    elif shirt_type.lower()=="s":
+        size_s+=1
+    elif shirt_type.lower()=="m":
+        size_m+=1
+    elif shirt_type.lower()=="s":
+        size_l+=1
     else:
-        print("invalid entry counted as hard")
-        hard_seats+=1
+        print("invalid entry counted as m")
+        size_m+=1
     
-    seat_count+=1    
-    if seat_count>=num_seats:
-        print("\nSeats are full")
+    shirt_count+=1
+    if shirt_count>=total_size:
+        print("\nAll shirts are sold out")
         break
-print(seat_count,"Seats total: ",hard_seats,"hard and ", soft_seats,"soft")
+print(shirt_type,"Shirts total", size_s, "small size, ", size_m, " medium size, ",size_l," large size")
