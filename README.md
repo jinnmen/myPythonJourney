@@ -34,3 +34,5 @@ https://help.github.com/articles/changing-a-remote-s-url/
 Backslash on j keyboard is "option + ¥ "
 On macbook pro its fn + /
 
+How can I store the user input in a while - loop? (python)
+https://stackoverflow.com/questions/22489354/how-can-i-store-the-user-input-in-a-while-loop-python
