@@ -5,3 +5,9 @@ count = 1
 while count < 6:
     print(count, "x", count, "=", count*count)
     count +=1
+
+count = 1
+
+while count >= 1:
+    print("loop")
+    count +=1
