@@ -36,3 +36,5 @@ On macbook pro its fn + /
 
 How can I store the user input in a while - loop? (python)
 https://stackoverflow.com/questions/22489354/how-can-i-store-the-user-input-in-a-while-loop-python
+
+git commit comments appear in commits section.
