@@ -1,6 +1,6 @@
 def str_analysis():
-    message=input("enter word of integer: ")
     while True:
+        message=input("enter word of integer: ")
         if message.isalpha()==True:
             print('"'+message+'"',"is all alphabetical characters!")
             break
