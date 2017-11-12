@@ -1,2 +1,0 @@
-def ticket_check():
-    
