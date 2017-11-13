@@ -38,3 +38,7 @@ How can I store the user input in a while - loop? (python)
 https://stackoverflow.com/questions/22489354/how-can-i-store-the-user-input-in-a-while-loop-python
 
 git commit comments appear in commits section.
+
+How to join array in new lines
+https://stackoverflow.com/questions/13893399/python-print-array-with-new-line
+print "\n".join(code)

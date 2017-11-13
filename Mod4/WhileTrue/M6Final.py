@@ -1,22 +1,27 @@
-intqbase="0"
-intqsum="0"
+intqbase=0
+intqsum=0
 intqlog=[]
 
 def adding_report():
-    while True:
-        report_type=input("Choose a report type(""A"" or ""T""): ")
-        print("Report Types include All items (""A"") or Total Only (""T"")")
-        if report_type=="A":
-            print("Input an integer to add to the total or ""Q"" to quit")
-            intq=input("Enter an integer or ""Q"": ")
-            if intq.isdigit()==True:
-                intqsum=intqbase+intq
-                intqlog.append(str(intq))
+    print("Report Types include All items (""A"") or Total Only (""T"")")
+    report_type=input("Choose a report type(""A"" or ""T""): ")
+    if report_type=="A":
+        print("Input an integer to add to the total or ""Q"" to quit")
+        while True:
+            if report_type=="A":
                 intq=input("Enter an integer or ""Q"": ")
-            elif intq.lower().startswith("q"):
-                print("Items\nintqlog\n\nTotal\nintqsum")
-                break
+                if intq.isdigit()==True:
+                    intq = int(intq)
+                    intqsum=intqbase+intq
+                    intqlog.append(intq)
+                    #intq=input("Enter an integer or ""Q"": ")
+                elif intq.lower().startswith("q"):
+                    print("Items\n")
+                    print("\n".join(intqlog)
+                    print("\n\nTotal\n",intqsum)
+                    break
+                else:
+                    print(intq,"is an invalid input")
             else:
-                print(intq,"is an invalid input")
-                
+                break
 adding_report()
