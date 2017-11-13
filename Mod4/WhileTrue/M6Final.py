@@ -4,7 +4,8 @@ intqsum=0
 
 def adding_report():
     intqlog=[]
-    sumq=sum(intqlog)
+    intqlogstr=str(''.join(intqlog))
+    sumq=sum(int(intqlogstr))
     
     print("Report Types include All items (""A"") or Total Only (""T"")")
     report_type=input("Choose a report type(""A"" or ""T""): ")
@@ -18,10 +19,12 @@ def adding_report():
                     #intqsum=int(intqbase)+int(intq)
                     intqlog.append(intq)
                     #intq=input("Enter an integer or ""Q"": ")
+
                 elif intq.lower().startswith("q"):
                     print("Items")
                     print("\n".join(intqlog))
                     print("\nTotal\n",sumq)
+
                     break
                 else:
                     print(intq,"is an invalid input")
