@@ -1,0 +1,4 @@
+Make directory: mkdir
+Make file: touch 
+Opening a file with app through terminal: open -a /Applications/BBEdit.app test.txt (Change file name and app name)
+to edit text file in terminal: pico
