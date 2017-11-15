@@ -2,3 +2,6 @@ Make directory: mkdir
 Make file: touch 
 Opening a file with app through terminal: open -a /Applications/BBEdit.app test.txt (Change file name and app name)
 to edit text file in terminal: pico
+
+Switching between python 2 and 3
+https://stackoverflow.com/questions/34680228/switch-between-python-2-7-and-python-3-5-on-mac-os-x
