@@ -5,3 +5,6 @@ to edit text file in terminal: pico
 
 Switching between python 2 and 3
 https://stackoverflow.com/questions/34680228/switch-between-python-2-7-and-python-3-5-on-mac-os-x
+
+How to install Python 2.7 on mac with homebrew:
+https://www.youtube.com/watch?v=QhutbLBKBok&t=419s
