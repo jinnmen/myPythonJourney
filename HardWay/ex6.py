@@ -18,13 +18,18 @@ print "I also said: '%s'." % y  #string is inside string
 
 #testing
 happy = True
+happy1 = "Happy is?! %r"
 sad = False 
-print "Happy is?! %r"
-print "Sad is?! %r"
+sad1 = "Sad1 is?! %r"
+sad2 = "Sad2 is?!"
+
+print happy1 % happy
+print sad1 % sad
+print sad2, happy
 
 #assigns var hilarious as False
 hilarious = False
-#print string with %r which repeats above line
+#print string with %r (raw data- best for debugging) which repeats above line
 joke_evaluation = "Isn't that joke so funny?! %r"
 
 #prints variables joke and hilarious with a space in between
