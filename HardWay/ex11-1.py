@@ -1,8 +1,5 @@
-print "What's the weather today?"
-weather = raw_input()
-print "Say something random?"
-random = raw_input()
-dog = raw_input("Do you own a dog?")
-num = int(input("Key in a number"))
+num1 = int(input("Key in a number: "))
+num2 = int(input("Key in another number to add: "))
+total= num1+num2
 
-print weather , random, dog, num
+print "the total is %i" % total
