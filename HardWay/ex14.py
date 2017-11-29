@@ -1,7 +1,7 @@
 from sys import argv
 
 script, user_name = argv
-prompt = '> '
+prompt = 'abcd1234 ' #shows in front of your answer.
 
 print "Hi %s, I'm the %s script." % (user_name, script)
 print "I'd like to ask you a few questions."
@@ -14,8 +14,12 @@ lives = raw_input(prompt)
 print "What kind of computer do you have?"
 computer = raw_input(prompt)
 
+print "What's your dog's name?"
+dog = raw_input(prompt)
+
 print """
 Alright, so you said %r about liking me.
 You live in $%r. Not sure where that is.
 And you have a %r computer. Nice.
-""" % (likes, lives, computer)
+Also, you have a dog called %r.
+""" % (likes, lives, computer, dog)
