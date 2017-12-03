@@ -16,18 +16,12 @@ target.truncate()
 
 print "Now I'm going to ask you for three lines."
 
-line1 = raw_input("line 1: ")
-line2 = raw_input("line 2: ")
-line3 = raw_input("line 3: ")
+line1, line2, line3 = raw_input("line 1:, line 2:, line 3: in one line separated by comma: ").split(",")
 
 print "I'm going to write these to the file."
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+line="\n"
+target.write(line1+line+line2+line+line3)
 
 print "And finally, we close it."
 target.close()
