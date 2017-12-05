@@ -1,5 +1,5 @@
 # this one is like your scripts with argv
-def print_two(*args):
+def print_two(*args): #* tells python to take all the arguments to the function and then put them in args as a list
 	arg1, arg2 = args
 	print "arg1: %r, arg2: %r" % (arg1, arg2)
 
@@ -20,3 +20,4 @@ print_two_again("Zed", "Shaw")
 print_one("First!")
 print_none()
 
+ 
