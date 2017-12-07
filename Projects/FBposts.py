@@ -98,7 +98,7 @@ def processFacebookPageFeedStatus(status_id, access_token):
 	# b) it's not easy to use in statistical programs
 	
 	status_published = datetime.datetime.strptime(
-			status['created_time'],)'%Y-%m-%dT%H:%M:%S+0000')
+			status['created_time'],'%Y-%m-%dT%H: %M: %S+0000')
 	status_published = status_published + \
 			datetime.timedelta(hours=-5) # EST
 	status_published = status_published.strftime(
@@ -149,44 +149,44 @@ def processFacebookPageFeedStatus(status_id, access_token):
 def scrapeFacebookPageFeedStatus(page_id, access_token):
 	with open('s_facebook_statuses.csv' % page_id, 'wb') as file:
 		w = csv.writer(file)
-		w.writerow(["status_id", "status_message", "link_name", "status_type"
+		w.writerow(["status_id", "status_message", "link_name", "status_type",
 					"status_link", "permalink_url", "status_published", "num_reactions",
 					"num_comments", "num_shares", "num_likes", "num_loves",
-					"num_wows", "num_hahas", "num_sads","num_angrys"])
+					"num_wows", "num_hahas", "num_sads", "num_angrys"])
 					
-			has_next_page = True
-			num_processed = 0 # keep a count on how many we've processed
-			scrape_starttime = datetime.datetime.now()
+		has_next_page = True
+		num_processed = 0 # keep a count on how many we've processed
+		scrape_starttime = datetime.datetime.now()
+		
+		print "Scraping %s Facebook Page: %s\n % (page_id, scrape_starttime)"
 			
-			print "Scraping %s Facebook Page: %s\n % (page_id, scrape_starttime)"
+		statuses = getFacebookPageFeedData(page_id, access_token, 100)
 			
-			statuses = getFacebookPageFeedData(page_id, access_token, 100)
-			
-			while has_next_page:
-				for status in statuses['data']:
+		while has_next_page:
+			for status in statuses['data']:
 				
-					# Ensure it is a status with the expected metadata
-					if 'reactions' in status:
-						w.writerow(processFacebookPageFeedStatus(status,
-							access_token))
+				# Ensure it is a status with the expected metadata
+				if 'reactions' in status:
+					w.writerow(processFacebookPageFeedStatus(status,
+						access_token))
 					
-					# output progress occasionally to make sure code is not
-					# stalling
-					num_processed += 1
-					if num_processed % 100 ==0:
-						print "%s Statuses Processed : %s" % \
-							(num_processed, datetime.datetime.now())	
+				# output progress occasionally to make sure code is not
+				# stalling
+				num_processed += 1
+				if num_processed % 100 ==0:
+					print "%s Statuses Processed : %s" % \
+						(num_processed, datetime.datetime.now())	
 							
-				# if there is no next page, we're done.				
-				if 'paging' in statuses.keys():
-					statuses = json.loads(request_until_succeed(
-											statuses['paging']['next']))
+			# if there is no next page, we're done.				
+			if 'paging' in statuses.keys():
+				statuses = json.loads(request_until_succeed(
+										statuses['paging']['next']))
 				
-				else:
-					has_next_page = False
+			else:
+				has_next_page = False
 					
-			print "\nDone!\n$%s Statuses Processed in %s" % \
-					(num_processed, datetime.datetime.now() - scrape_starttime)
+		print "\nDone!\n$%s Statuses Processed in %s" % \
+				(num_processed, datetime.datetime.now() - scrape_starttime)
 					
 if __name__ == '__main__':
 	scrapeFacebookPageFeedStatus(page_id, access_token)
