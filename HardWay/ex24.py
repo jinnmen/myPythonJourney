@@ -7,7 +7,7 @@ with logic so firmly planted
 cannot discern \n the needs of love
 nor comprehend passion from intuition
 and requires an explanation
-\n\t\twhere there is none.
+\n\t\twhere there is none. # \n is new line, \t is tab
 """
 
 print "______________"
@@ -27,9 +27,9 @@ start_point = 10000
 beans, jars, crates = secret_formula(start_point)
 
 print "With a starting point of: %d" % start_point
-print "We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates)
+print "We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates) #prints string with decimal variables individually. Changed jelly beans to beans as this is part of function. Can change to any value as long as match order.
 
-start_point = start_point / 10
+start_point = start_point / 10 # divides start point by 10
 
-print "We can also do that this way:"
-print "We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point) 
+print "We can also do that this way:" # prints string
+print "We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point) #print's string with decimal variables from function secret_formula(<#started#>)
