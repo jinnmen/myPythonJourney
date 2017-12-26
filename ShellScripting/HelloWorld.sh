@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=cQepf9fY6cE
 #! /bin/bash  <---find this by using "which bash" in command to find root folder for bash
 echo "Hello World"
 

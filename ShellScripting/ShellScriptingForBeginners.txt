@@ -1,0 +1,8 @@
+https://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192
+
+https://www.howtogeek.com/67469/the-beginners-guide-to-shell-scripting-the-basics/
+
+https://www.shellscript.sh/
+
+https://www.youtube.com/watch?v=cQepf9fY6cE
+
