@@ -1,4 +1,4 @@
-print "You enter a dark room with two doors. Do you go through door #1 or door #2?"
+print "You enter a dark room with two doors. Do you go through door #1, door #2, door #3 or door #4?"
 
 door = raw_input("> ")
 
@@ -29,5 +29,41 @@ elif door == "2":
 	else:
 		print "The insanity rots your eyes into a poool of muck. Good job!"
 
+elif door == "3":
+	print "You see a big hat with the number 3. It says 'You have 3 choices'"
+	print "1. Choose Gryffindor"
+	print "2. Choose Slytherine"
+	print "3. Choose Ravenclaw"
+	
+	hp = raw_input("> ")
+	
+	if hp == "1":
+		print "Welcome Harry!"
+	elif hp == "2":
+		print "Welcome Snape"
+	else:
+		print "Yes! You are the one Mr %s ." % hp
+		
+elif door == "4":
+	print "You see a big hat with the number 4. It looks like a hat you saw, it says 'You have 3 choices'"
+	print "1. Choose Gryffindor"
+	print "2. Choose Slytherine"
+	print "3. Choose Ravenclaw"
+	
+	hp = raw_input("> ")
+	
+	if hp == "1":
+		print "Welcome Harry!"
+	else:
+		print "No choose 1!!!"
+	if hp == "2":
+		print "Welcome Snape"
+	else:
+		print "Noooo choose 2!!!"
+	if hp == "3":
+		print "Yes! You are the one Mr %s ." % hp
+	else:
+		print "Noooo choose 3!!!"
+		
 else:
 	print "You stumble around and fall on a knife and die. Good job!"
