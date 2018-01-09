@@ -1,0 +1,30 @@
+Apple Script
+##Part 1
+https://www.youtube.com/watch?v=tysKhdpYorE
+
+Make apple say something
+
+Eg.
+say "Hi man!"
+
+quit a program, or finder. Eg.
+tell application "Finder" to quit
+
+##Part 2
+https://www.youtube.com/watch?v=3FTKbcjocmQ
+3 important components: Variables, input and output.
+Very English language syntax
+Creating variable then displaying eg.
+Set var to 1
+display dialog var
+
+To set to Q&A:
+set var to "Hello"
+set question to display dialog var buttons {"1", "2", "3"}
+set answer to button returned of question 
+display dialog answer
+
+##How to use Apple Script and Automator
+https://www.youtube.com/watch?v=NQq2eKbB7Z4
+
+
