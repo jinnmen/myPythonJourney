@@ -47,7 +47,7 @@ def table():
 
 			if "shield".lower() in next:
 				print "You picked up a shield of the sun!"
-				items_picked.append("shield") #how to only allow add 1x? Prevent duplicate?
+				items_picked.append("shield") if "shield" not in items_picked else None #No duplicates into list #https://stackoverflow.com/questions/19834806/is-there-a-more-pythonic-way-to-prevent-adding-a-duplicate-to-a-list
 				# print items[0] #prints first item, item 0
 				print items_picked #prints items picked in list form
 				print items_picked[0] #prints items within list 
@@ -74,7 +74,7 @@ def door_left():
 		next = raw_input("> ")
 	
 
-
+"""
 def door_middle():
 	print "Undead zombies!"
 	
@@ -86,7 +86,7 @@ def door_middle():
 		if next.lower == "Use garlic":
 			print die("They're zombies! Not vampires!")
 		elif 
-			
+"""			
 		
 
 def door_right():
