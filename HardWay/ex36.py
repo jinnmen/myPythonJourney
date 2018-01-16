@@ -1,3 +1,5 @@
+import time
+
 items = ['shield', 'sword', 'garlic']
 # items = False
 items_picked = []
@@ -38,8 +40,8 @@ def in_castle():
 
 
 def table():	
-	print "You see 3 items on the table."
-	print "A shield, a sword, and some garlic"
+	print "You see 4 items on the table."
+	print "A shield, a sword, some garlic and holy water"
 	print "What do you do?"
 	
 	while True:
@@ -56,11 +58,15 @@ def table():
 			elif "sword".lower() in next:
 				#print "You picked up a sword of truth!"
 				print "You picked up a %s of stars!" % items_picked[0]
-				items_picked.append("sword")
+				items_picked.append("sword") if "sword" not in items_picked else None
 				break
 			elif "garlic".lower() in next:
 				print "You picked up garlic."
-				items_picked.append("garlic")
+				items_picked.append("garlic") if "garlic" not in items_picked else None
+				break
+			elif "holy water".lower() in next:
+				print "You picked up holy water."
+				items_picked.append("holy water") if "holy water" not in items_picked else None
 				break
 			else:
 				print "I'm not sure what you want to do"
@@ -73,8 +79,41 @@ def door_left():
 		
 		next = raw_input("> ")
 	
-
-"""
+		if next.lower() == "fight":
+			if "sword" in items_picked and "shield" in items_picked: #Why can't use [] or ()== True or False?
+				print "You used both sword and shield!"
+				time.sleep(1)
+				print "swoosh! You slash some bats heads off"
+				time.sleep(2)
+				print "ping! (some bats smack into your shield)" 
+				time.sleep(1)
+				print "You killed all bats! Now you proceed into the next room"
+				silver_room()
+			elif "sword" in items_picked and "shield" not in items_picked:
+				print "You used sword!"
+				time.sleep(1)
+				print "swosh!!! You slice some bats."
+				time.sleep(1)
+				print "But you have no shield!"
+				time.sleep(1)
+				print die("ping! Some bats smash into you and you die.")
+			elif "sword" not in items_picked and "shield" in items_picked:
+				print "You used shield!"
+				time.sleep(1)
+				print "ping!!! You defended some bats."
+				time.sleep(1)
+				print "But you have no sword!"
+				time.sleep(1)
+				print die("They overpower you and bite your head off.")
+			else:
+				print "You can't run away from the alien bats, they bite your ass off"
+				time.sleep(1)
+				print die("Goodbye young knight")
+		else:
+			print die("Goodbye dummy")
+			
+					
+	
 def door_middle():
 	print "Undead zombies!"
 	
@@ -83,10 +122,19 @@ def door_middle():
 		
 		next = raw_input("> ")
 		
-		if next.lower == "Use garlic":
+		if next.lower() == "Use garlic".lower():
 			print die("They're zombies! Not vampires!")
-		elif 
-"""			
+		elif next.lower() =="Use holy water".lower():
+			if items_picked("holy water") == True:
+				print "You kicked zombie ass!"
+				silver_room()
+			else:
+				print die("You would if you could, but you can't because you don't have it!")
+		elif next.lower() == "flee".lower():
+			print "You run away screaming like a little girl."
+			break
+		else:
+			print "Please type in English, not jibberish."
 		
 
 def door_right():
