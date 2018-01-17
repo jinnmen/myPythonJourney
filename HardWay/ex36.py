@@ -1,4 +1,7 @@
 import time
+import sys
+from time import sleep
+import re
 
 items = ['shield', 'sword', 'garlic']
 # items = False
@@ -153,13 +156,31 @@ def door_right():
 		else:
 			print "Please key in something I could understand"
 		
+words = """Welcome to the silver room.\nIn here, time seems to slow down.\nYou feel comfortable but see tons of silver.\nHow much do you take?\n"""
+def delay_typer(words, delay = 0.5, stream = sys.stdout):
+	tokens = re.findall(r'\s*\S+\s*', words)
+	for s in tokens:
+		stream.write(s)
+		stream.flush()
+		sleep(delay)
+
 def silver_room():
-	print "Welcome to the silver room"
+	delay_typer(words)
+	
+	next = raw_input("> ")
+	
+	if next == int and int(next) < 100:
+		delay_typer('You aren\'t greedy, you snap and wake up from the spell, time speeds up again.\nYou wake up from the castle dream and things go back to normal\nThe End\n', 0.1)
+	else:
+		delay_typer(die("You either can't type of are too greedy!\nYou live in the curse forever til the end of time.\n"), 1)
+	
+	
 	
 def die(end):
 	print "You're dead!", end
 	exit(0)
 	
 #table()	#start game from table, test code
-in_castle() # start game from castle, to test code		
+#in_castle() # start game from castle, to test code		
 # gow() # start game from beginning
+silver_room()
