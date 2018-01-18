@@ -158,7 +158,7 @@ def door_right():
 		
 words = """Welcome to the silver room.\nIn here, time seems to slow down.\nYou feel comfortable but see tons of silver.\nHow much do you take?\n"""
 def delay_typer(words, delay = 0.5, stream = sys.stdout):
-	tokens = re.findall(r'\s*\S+\s*', words)
+	tokens = re.findall(r'\s*\S+\s*', words) # remove '+ beside S to print word by word, for more info on regular expressions: https://developers.google.com/edu/python/regular-expressions'
 	for s in tokens:
 		stream.write(s)
 		stream.flush()
