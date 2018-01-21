@@ -31,4 +31,5 @@ Meanwhile, join(' ',things) means, "Call join with '' and things." Understand ho
 # Read up on class vs instances. Keywords: _init_
 5. What's the relationship between dir(something) and the "class" of something?
 6 Find out OOP vs functional programming. 
+https://docs.python.org/2/howto/functional.html
 """
