@@ -1,0 +1,4 @@
+Managed to locate the top panel padding settings in style.css outside css folder but inside theme's folder.
+
+Next is to find out how to edit the words within the contact page. Database hint:
+https://codex.wordpress.org/File:WP4.4.2-ERD.png
