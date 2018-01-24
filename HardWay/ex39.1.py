@@ -79,3 +79,9 @@ if not pref:
 # get a pref with a default value
 pref = prefs.get('SHI', 'Does not Exist')
 print "The city for the prefecture 'SHI' is %s" % pref
+
+# sorting within dictionary   https://www.saltycrane.com/blog/2007/09/how-to-sort-python-dictionary-by-keys/
+for key in sorted(prefs.iterkeys()):
+	print "%s: %s" % (key, prefs[key])
+	
+# Differences between dictionary, list, set: https://stackoverflow.com/questions/3489071/in-python-when-to-use-a-dictionary-list-or-set
