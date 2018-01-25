@@ -61,7 +61,7 @@ print "Ehime has ", cities[prefs['Ehime']]
 
 # print every prefecture's abbreviation
 print '-' * 10
-for pref, abbrev in prefs.items():
+for pref, abbrev in prefs.items():    #Pref and abbrev are just names you create now for the 2 variables within the dict. It could be change to a or b. Anything is ok.
 	print "%s is abbreviated as %s" % (pref, abbrev)
 	
 # print every city in the prefectures
