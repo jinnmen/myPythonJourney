@@ -11,3 +11,24 @@ attribute: A property classes have that are from composition and are usually var
 is-a: A phrase to say that something inherits from another, as in a Salmon is-a Fish.
 has-a: A phrase to say that something is composed of other things or has a trait, as in a Salmon has-a mouth.
 """
+
+"""
+class X(Y)
+"Make a class named X that is-a Y"
+
+class X(object): def __init__(self, J)
+"class X has-a __init__ that takes self and J parameters."
+
+class X(object): def M(self, J)
+"class X has-a function named M that takes self and J parameters"
+
+foo = X()
+"Set foo to an instance of class X."
+
+foo.M(J)
+"From foo get the function M with parameters self, J."
+
+foo.K = Q
+"From foo get the K attribute and set it to Q."
+"""
+
