@@ -73,3 +73,13 @@ crouse = Salmon()
 
 ## harry is a Halibut
 harry = Halibut()
+
+"""
+Extra Questions
+Why python added strange object class?
+http://python-history.blogspot.jp/2009/02/adding-support-for-user-defined-classes.html
+
+Possible to use Class like an object?
+Everything in Python is an object, including classes
+https://softwareengineering.stackexchange.com/questions/245929/using-class-like-an-object-in-python
+"""
