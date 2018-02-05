@@ -1,0 +1,5 @@
+setup linux
+installed ssh
+enabled ssh
+installed apache2
+Need to enable apache next
