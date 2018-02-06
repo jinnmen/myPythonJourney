@@ -22,8 +22,6 @@ mouse_terry = Mouse(["Hi, my name is Terry the mouse!"])
 mouse_terry.terry_say()
 
 
-
-
 ## Make a class named Cat that is-a Animal. Class Cat has-a __init__ that takes self and name parameters. 
 class Cat(Animal):
 
@@ -39,18 +37,38 @@ Cat_mando = Cat(["Catmando says Meow"])
 
 Cat_mando.meow_says()
 
-"""
+
 		
 ## Make a class named Person that is-a Object. Class Person has-a __init__ that takes self and name parameters.
 class Person(object):
 
 	def __init__(self, name):
 	## From class get the name attribute and set it to name. Self has-a name.
-	self.name = name
+		self.name = name
 	
 	## Person has-a pet of some kind. 
-	self.pet = None
-	
+		self.pet = None
+
+	def person_do(self):
+		for line in self.name:
+			print line
+
+"""	
+Can't do below because above is None
+	def pet_do(self):
+		for line in self.pet:
+			print line
+"""
+
+Person_saydo = Person(["Man do see what say do"])
+
+# Pet_saydo = Person(["Who's da pet?"])
+
+Person_saydo.person_do()
+
+# Pet_saydo.pet_do()
+
+"""
 ## Employee is-a person
 class Employee(Person):
 
