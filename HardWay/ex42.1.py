@@ -68,16 +68,26 @@ Person_saydo.person_do()
 
 # Pet_saydo.pet_do()
 
-"""
+
 ## Employee is-a person
 class Employee(Person):
 
 	def __init__(self, name, salary):
 	## ?? hmm what is this strange magic? super is-a employee, self.
-	super(Employee, self).__init__(name)
+		super(Employee, self).__init__(name)
 	## ?? self has a salary
-	self.salary = salary
-	
+		self.salary = salary
+
+	def employee_say(self):
+		for line in self.salary:
+			print line
+
+employee_saysal = Employee(["My salary is USD$1", "+200", "+500%"])
+
+employee_saysal.employee_say()
+
+"""
+
 ## ?? Fish is-a object
 class Fish(object):
 	pass
