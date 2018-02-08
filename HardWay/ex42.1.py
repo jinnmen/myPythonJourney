@@ -68,7 +68,8 @@ Person_saydo.person_do()
 
 # Pet_saydo.pet_do()
 
-
+"""
+To return to resolve in future
 ## Employee is-a person
 class Employee(Person):
 
@@ -78,15 +79,21 @@ class Employee(Person):
 	## ?? self has a salary
 		self.salary = salary
 
+	def employee_sal(self):
+		for line in self.salary:
+			print line
+
 	def employee_say(self):
 		for line in self.salary:
 			print line
 
-employee_saysal = Employee(["My salary is USD$1", "+200", "+500%"])
+employee_saysal = salary(["My salary is USD1"])
 
-employee_saysal.employee_say()
+employee_saysal.employee_sal()
 
 """
+
+
 
 ## ?? Fish is-a object
 class Fish(object):
