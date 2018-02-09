@@ -38,5 +38,75 @@ Make class hierarchy
 * Scene
 	* Death
 	* Central Corridor
+	* Laser Weapon Armory
+	* The Bridge
+	* Escape Pod
 	
+Go through and figure out what actions needed based on verbs. "run" engine, "Get next scene" from map, "opening scene", "enter" scene:
+*Map
+	- next_scene
+	- opening_scene
+* Engine
+	- play
+* Scene
+	- enter
+	* Death
+	* Central Corridor
+	* Laser Weapon Armory
+	* The Bridge
+	* Escape Pod
+-enter under Scene: All scenes under it will inherit it and override it.	
+Now we code, small example:
 """
+class Scene(object):
+	
+	def enter(self):
+		pass
+
+class Engine(object):
+
+	def __init__(self, scene_map):
+		pass
+	
+	def play(self):
+		pass
+		
+class Death(Scene):
+
+	def enter(self):
+		pass
+
+class CentralCorridor(Scene):
+
+	def enter(self):
+		pass
+
+class LaserWeaponArmory(Scene):
+
+	def enter(self):
+		pass
+		
+class TheBridge(Scene):
+
+	def enter(self):
+		pass
+
+class EscapePod(Scene):
+
+	def enter(self):
+		pass
+		
+class Map(object):
+
+	def __init__(self, start_scene):
+		pass
+	
+	def next_scene(self, scene_name):
+		pass
+	
+	def opening_scene(self):
+		pass
+		
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
