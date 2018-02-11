@@ -1,15 +1,20 @@
 """
 Write out nouns/ draw problem. 
 A lil' paragraph for the game:
-Aliens have invaded a space ship and our hero has to go through a maze of rooms defeating them so he can escape into an escape pod to the planet below. 
-The game will be more like a Zrok or Adventure type game with text outputs and funny ways to die.
-The game wil involve an engine that runs a map full of rooms or scenes. Each room will print its own description when the
+Aliens have invaded a space ship and our hero has to go through a maze of rooms 
+defeating them so he can escape into an escape pod to the planet below. 
+The game will be more like a Zrok or Adventure type game with text outputs and funny 
+ways to die.
+The game wil involve an engine that runs a map full of rooms or scenes. Each room will 
+print its own description when the
 player enters it and then tell the engine what room to run next out of the map.
 
 Describe each scene:
 Death: When player dies and should be something funny.
-Central Corridor: Starting point and has Gothon already standing there they have to defeat with a joke before continuing
-Laser Weapon Armory: When hero gets neutron bomb to blow up ship before getting escape pod. Keypad and has to guess number.
+Central Corridor: Starting point and has Gothon already standing there they have to 
+defeat with a joke before continuing
+Laser Weapon Armory: When hero gets neutron bomb to blow up ship before getting 
+escape pod. Keypad and has to guess number.
 The Bridge: Another battle sene with Gothon where hero places bomb.
 Escape Pod: Hero escapes but only guessin right pod.
 
@@ -42,7 +47,8 @@ Make class hierarchy
 	* The Bridge
 	* Escape Pod
 	
-Go through and figure out what actions needed based on verbs. "run" engine, "Get next scene" from map, "opening scene", "enter" scene:
+Go through and figure out what actions needed based on verbs. "run" engine, 
+"Get next scene" from map, "opening scene", "enter" scene:
 *Map
 	- next_scene
 	- opening_scene
@@ -67,7 +73,8 @@ class Scene(object):
 		print "This scene is not yet configured. Subclass it and implement enter()."
 		exit(1)
 
-# from skeleton code, have a base class for Scene. Common things all scenes do. In here, not do as much, more of demo.
+# from skeleton code, have a base class for Scene. Common things all scenes do. In here, 
+# not do as much, more of demo.
 # Demo of what you would do to make a base class.
 
 class Engine(object):
@@ -146,7 +153,8 @@ class CentralCorridor(Scene):
 			print "DOES NOT COMPUTE!"
 			return 'central_corridor'
 			
-# After creating CentralCorridor, start of game, do scenes for game before Map because need reference later.
+# After creating CentralCorridor, start of game, do scenes for game before Map because 
+# need reference later.
 			
 class LaserWeaponArmory(Scene):
 
@@ -182,24 +190,99 @@ class LaserWeaponArmory(Scene):
 class TheBridge(Scene):
 
 	def enter(self):
-		pass
-
+		print "You burst onto the Bridge with the neutron destruct bomb"
+		print "under your arm and surprise 5 Gothons who are trying to"
+		print "take control of the ship. Each of them has an even uglier"
+		print "clown costume than the last. They haven't pulled their"
+		print "weapons out yet, as they see the active bomb under your"
+		print "arm and don't want to set it off."
+		
+		action = raw_input ("> ")
+		
+		if action == "throw the bomb":
+			print "In a panic you throw the bomb at the grou of Gothons"
+			print "and make a leap for the door. Right as you drop it a"
+			print "Gothon shoots you right in the back killing you."
+			print "As you die you see another Gothon frantically try to disarm"
+			print "the bomb. You die knowing they will probrably blow up when"
+			print "it goes off."
+			return 'death'
+			
+		elif action == "slowly place the bomb":
+			print "You point your blaster at the bomb under your arm"
+			print "and the Gothons put their hands up and start to sweat."
+			print "You inch backward to the door, open it, and then carefully"
+			print "place the bomb on the floor, pointing your blaster at it."
+			print "You then jump back through the door, punch the close button"
+			print "and blast the lock so the Gothons can't get out."
+			print "Now that the bomb is placed you run to the escape pod to"
+			print "get off this tin can."
+			return 'escape_pod'
+		
+		else:
+			print "DOES NOT COMPUTE!"
+			return "the_bridge"
+						
 class EscapePod(Scene):
 
 	def enter(self):
-		pass
+		print "You rush through the ship desperately trying to make it to"
+		print "the escape pod before the whole ship explodes. It seems like"
+		print "hardly any Gothons are on the ship, so your run is clear of"
+		print "interference. You get to the chamber with the escape pods, and"
+		print "now need to pick one to take. Some of them could be damaged"
+		print "but you don't have time to look. There's 5 pods, which one"
+		print "do you take?"
 		
+		good_pod = randint(1,5)
+		guess = raw_input("[pod #]> ")
+		
+		if int(guess) != good_pod:
+			print "You jump into pod %s and hit the eject button." % guess
+			print "The pod escapes out into the void of space, then"
+			print "implodes as the hull ruptures, crushing your body"
+			print "into jam jelly."
+			print 'death'
+		else:
+			print "You jump into pod %s and hit the eject button." % guess
+			print "The pod easily slides out onto space heading to"
+			print "the planet below. As it flies to the planet, you look"
+			print "back and see your ship implode then explode like a"
+			print "bright star, taking out the Gothon ship at the same"
+			print "time. You won!"
+			
+			return 'finished'
+
+# This is the rest of the game's scenes, since I know I need them and have thought
+# about how they'll flow together I'm able to code them directly.
+# Not type in everything, build incrementally, one bit at a time.
+					
 class Map(object):
 
+	scenes = {
+		'central_corridor': CentralCorridor(),
+		'laser_weapon_armory': LaserWeaponArmory(),
+		'the_bridge': TheBridge(),
+		'escape_pod': EscapePod(),
+		'death': Death()
+	}
+
 	def __init__(self, start_scene):
-		pass
+		self.start_scene = start_scene
 	
 	def next_scene(self, scene_name):
-		pass
+		return Map.scenes.get(scene_name)
 	
 	def opening_scene(self):
-		pass
+		return self.next_scene(self.start_scene)
+
+# After Map class, can see storing each scene by name in a dictionary, then refer to
+# that dict with Map.scenes. Also why map comes after scenes because dict has to refer
+# to them so need to exist.
 		
 a_map = Map('central_corridor')
 a_game = Engine(a_map)
 a_game.play()
+
+# more on classes and explanation of __int__ :
+# https://stackoverflow.com/questions/8609153/why-do-we-use-init-in-python-classes
