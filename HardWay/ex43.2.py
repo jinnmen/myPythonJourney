@@ -46,3 +46,42 @@ Make class hierarchy
 - enter under scene, all scenes under it will inherit and override it.
 
 """
+
+from sys import exit
+from random import randint
+
+class Scene(object):
+
+    def enter(self):
+        print "This scene is under construction"
+	exit(1)
+
+class Musical_box(object)
+
+    def __init__(self, scene_map):
+	self.scene_map = scene_map
+
+    def play(self):
+	current_scene = self.scene_map.opening_scene()
+
+	while True:
+	    print "\n------------"
+	    next_scene_name = current_scene.enter()
+	    current_scene = self.scene_map.next_scene(next_scene_name)
+
+class Death(Scene):
+	
+	dendings = [
+	    "Death is like sweet candy. You savour it.",
+	    "You really need to improve in gaming.",
+	    "Your imaginary 4 year old sister can play better than you."	
+	]
+
+	def enter(self):
+	    print Death.dendings[randint(0, len(self.dendings)-1]
+	    exit(1)
+
+def WhiteRoom(Scene):
+
+    def enter(self):
+	print 
