@@ -56,12 +56,12 @@ class Scene(object):
         print "This scene is under construction"
 	exit(1)
 
-class Musical_box(object)
+class Kindle(object):
 
     def __init__(self, scene_map):
 	self.scene_map = scene_map
 
-    def play(self):
+    def ignite(self):
 	current_scene = self.scene_map.opening_scene()
 
 	while True:
@@ -78,10 +78,33 @@ class Death(Scene):
 	]
 
 	def enter(self):
-	    print Death.dendings[randint(0, len(self.dendings)-1]
+	    print Death.dendings[randint(0, len(self.dendings)-1)]
 	    exit(1)
 
 def WhiteRoom(Scene):
 
     def enter(self):
-	print 
+	print "You awake abruptly and find yourself in a mysterious white cape."
+	print "You're in a strange room with surrounded in 4 white walls,"
+	print "a white ceiling and a white floor."
+	print "As you struggle, the cape tightens."
+	print "What do you do?"
+	
+	action = raw_input("> ")
+	
+	if action == "struggle":
+		print "The more you move the tighter it gets"
+		print "You lose air"
+		return 'death'
+		
+	elif action == "stop":
+		print "The cape loosens, something drops down onto you from above your head."
+		print "Darkness befalls you, as you reach out, you touch something silky"
+		print "This time, it's another cape but black"
+		return 'BlackRoom'
+	
+	else:
+		print "Type something sensible!"
+		return 'WhiteRoom'
+		
+
