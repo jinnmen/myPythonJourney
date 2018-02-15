@@ -106,5 +106,68 @@ def WhiteRoom(Scene):
 	else:
 		print "Type something sensible!"
 		return 'WhiteRoom'
-		
 
+def BlackRoom(Scene):
+	
+	def enter(self):
+		print "The room is pitch black."
+		print "As you move your hands around,"
+		print "You touch something that feels like 1 wood and 2 stones"
+		print "You try to ignite a kindle but how many times do you try?"
+		ignite = "%d%d" % (randint(1,2),randint(1,2))
+		guess = raw_input("> ")
+		guesses = 0
+		
+		while guess != ignite and guess < 7:
+			print "Chk chk chk, nothing happens"
+			guesses += 1
+			guess = raw_input(">")
+		
+		if guess == ignite:
+			print "A kindle lits up the room bright as daylight."
+			return 'grayroom'
+		else:
+			print "You ran out of wood and stones..."
+			print "Darkness engulfs you"
+			return 'death'
+		
+class GrayRoom(Scene):
+	
+	def enter(self):
+		print "As your eyes adjust to the sudden flash of light."
+		print "You can now see yourself in a gray room."
+		print "There are 3 doors in front of you."
+		print "One of which may be your very chance to escape this strange place."
+		print "However, the doors seem to randomly change positions."
+		print "Which door do you pick? (1 to 3)"
+		
+		escape = randnint(1,3)
+		guess = raw_input("[Door #]> ")
+		
+		if int(guess) != escape:
+			print "You opened the door and rush towards your exit"
+			print "However, your next step proved fatal."
+			return 'death'
+		else:
+			print "You open the door to your escape"
+			print "Running as fast as you could, you don't look back."
+			
+			return 'finished'
+			
+class Map(object):
+	
+	scenes = {
+		'whiteroom': WhiteRoom(),
+		'blackroom': BlackRoom(),
+		'grayroom': GrayRoom(),
+		'death': Death()
+	}
+	
+	def __init__(self, start_scene):
+		self.start_scene = start_scene
+		
+	def next_scene(self,scene_name)
+		return Map.scenes.get(scene_name)
+		
+	def opening_scene(self):
+		return self.next_scene(self.start_scene)
