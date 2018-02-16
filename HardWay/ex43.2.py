@@ -52,60 +52,60 @@ from random import randint
 
 class Scene(object):
 
-    def enter(self):
-        print "This scene is under construction"
-	exit(1)
+	def enter(self):
+		print "This scene is under construction"
+		exit(1)
 
 class Kindle(object):
 
-    def __init__(self, scene_map):
-	self.scene_map = scene_map
+	def __init__(self, scene_map):
+		self.scene_map = scene_map
 
-    def ignite(self):
-	current_scene = self.scene_map.opening_scene()
+	def ignite(self):
+		current_scene = self.scene_map.opening_scene()
 
 	while True:
-	    print "\n------------"
-	    next_scene_name = current_scene.enter()
-	    current_scene = self.scene_map.next_scene(next_scene_name)
+		print "\n------------"
+		next_scene_name = current_scene.enter()
+		current_scene = self.scene_map.next_scene(next_scene_name)
 
 class Death(Scene):
 	
 	dendings = [
-	    "Death is like sweet candy. You savour it.",
-	    "You really need to improve in gaming.",
-	    "Your imaginary 4 year old sister can play better than you."	
+		"Death is like sweet candy. You savour it.",
+		"You really need to improve in gaming.",
+		"Your imaginary 4 year old sister can play better than you."	
 	]
 
 	def enter(self):
-	    print Death.dendings[randint(0, len(self.dendings)-1)]
-	    exit(1)
+		print Death.dendings[randint(0, len(self.dendings)-1)]
+		exit(1)
 
 def WhiteRoom(Scene):
 
-    def enter(self):
-	print "You awake abruptly and find yourself in a mysterious white cape."
-	print "You're in a strange room with surrounded in 4 white walls,"
-	print "a white ceiling and a white floor."
-	print "As you struggle, the cape tightens."
-	print "What do you do?"
+	def enter(self):
+		print "You awake abruptly and find yourself in a mysterious white cape."
+		print "You're in a strange room with surrounded in 4 white walls,"
+		print "a white ceiling and a white floor."
+		print "As you struggle, the cape tightens."
+		print "What do you do?"
 	
-	action = raw_input("> ")
+		action = raw_input("> ")
 	
-	if action == "struggle":
-		print "The more you move the tighter it gets"
-		print "You lose air"
-		return 'death'
+		if action == "struggle":
+			print "The more you move the tighter it gets"
+			print "You lose air"
+			return 'death'
 		
-	elif action == "stop":
-		print "The cape loosens, something drops down onto you from above your head."
-		print "Darkness befalls you, as you reach out, you touch something silky"
-		print "This time, it's another cape but black"
-		return 'BlackRoom'
+		elif action == "stop":
+			print "The cape loosens, something drops down onto you from above your head."
+			print "Darkness befalls you, as you reach out, you touch something silky"
+			print "This time, it's another cape but black"
+			return 'blackroom'
 	
-	else:
-		print "Type something sensible!"
-		return 'WhiteRoom'
+		else:
+			print "Type something sensible!"
+			return 'whiteroom'
 
 def BlackRoom(Scene):
 	
@@ -166,8 +166,12 @@ class Map(object):
 	def __init__(self, start_scene):
 		self.start_scene = start_scene
 		
-	def next_scene(self,scene_name)
+	def next_scene(self,scene_name):
 		return Map.scenes.get(scene_name)
 		
 	def opening_scene(self):
 		return self.next_scene(self.start_scene)
+		
+a_map = Map('whiteroom')
+a_game = BlackRoom(a_map)
+a_game.play()
