@@ -64,10 +64,10 @@ class Kindle(object):
 	def ignite(self):
 		current_scene = self.scene_map.opening_scene()
 
-	while True:
-		print "\n------------"
-		next_scene_name = current_scene.enter()
-		current_scene = self.scene_map.next_scene(next_scene_name)
+		while True:
+			print "\n------------"
+			next_scene_name = current_scene.enter()
+			current_scene = self.scene_map.next_scene(next_scene_name)
 
 class Death(Scene):
 	
@@ -81,7 +81,7 @@ class Death(Scene):
 		print Death.dendings[randint(0, len(self.dendings)-1)]
 		exit(1)
 
-def WhiteRoom(Scene):
+class WhiteRoom(Scene):
 
 	def enter(self):
 		print "You awake abruptly and find yourself in a mysterious white cape."
@@ -107,7 +107,7 @@ def WhiteRoom(Scene):
 			print "Type something sensible!"
 			return 'whiteroom'
 
-def BlackRoom(Scene):
+class BlackRoom(Scene):
 	
 	def enter(self):
 		print "The room is pitch black."
@@ -139,20 +139,25 @@ class GrayRoom(Scene):
 		print "There are 3 doors in front of you."
 		print "One of which may be your very chance to escape this strange place."
 		print "However, the doors seem to randomly change positions."
-		print "Which door do you pick? (1 to 3)"
+		print "Which door do you pick? (1 or 2)"
 		
-		escape = randnint(1,3)
+		escape = randint(1,2)
 		guess = raw_input("[Door #]> ")
+		guesses = 0
 		
-		if int(guess) != escape:
+		while guess != escape and guesses <10:
+			print "Try another door"
+			guesses += 1
+			guess = raw_input("[Door #]> ")
+		
+		if int(guess) == escape:
+			print "You open the door to your escape"
+			print "Running as fast as you could, you don't look back."
+			return 'finished'
+		else:
 			print "You opened the door and rush towards your exit"
 			print "However, your next step proved fatal."
 			return 'death'
-		else:
-			print "You open the door to your escape"
-			print "Running as fast as you could, you don't look back."
-			
-			return 'finished'
 			
 class Map(object):
 	
@@ -173,5 +178,5 @@ class Map(object):
 		return self.next_scene(self.start_scene)
 		
 a_map = Map('whiteroom')
-a_game = BlackRoom(a_map)
-a_game.play()
+a_game = Kindle(a_map)
+a_game.ignite()
