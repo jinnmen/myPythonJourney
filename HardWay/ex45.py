@@ -23,9 +23,37 @@ get a bone for each room's trick cleared.
 After getting 3 bones, you win as best dog trainer of 2018.
 
 For story starting scene, read from file (ex.15)
+
+*Dog
+-Fido
+-Dido
+-Kido
+
+*Skills
+-roll
+-jump
+-sit
+
+*Map
+-opening scene
+-next scene
+
+*Scenes
+-enter
+*death
+*room r
+*room j
+*room s
+
+#To start game:
+*Wishbone
+-star
+
+
 """
 
 from sys import argv
+from sys import exit
 
 #To run this correctly, type python this file name + "/Users/Mac/Documents/jimmy personal/python/ex45op.txt"
 script, filename = argv
@@ -35,10 +63,30 @@ txt = open(filename)
 print "Contents of file opened %r: " % filename
 print txt.read()
 
-print "Type the filename again: "
-file_again = raw_input("> ")
+class Scene(object):
 
-txt_again = open(file_again)
+	def enter(self):
+		print "This scene is under construction"
+		exit (1)
+		
+class wishbone(object):
 
-print txt_again.read()
+	def __init__(self, scene_map):
+		self.scene_map = scene_map
+		
+	def star(self):
+		current_scene = self.scene_map.opening_scene()
+		
+		while True:
+			print "\n-------------"
+			next_scene_name = current_scene.enter()
+			current_scene = self.scene_map.next_scene(next_scene_name)
+# https://stackoverflow.com/questions/34379653/lpthw-ex-43-queries-on-use-of-self			
+
+class Death(object):
+
+	
+			
+
+	
 
