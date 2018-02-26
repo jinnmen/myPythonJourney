@@ -44,6 +44,7 @@ For story starting scene, read from file (ex.15)
 *room r
 *room j
 *room s
+*hall #this is main area you are in, always return here to train dogs
 
 #To start game:
 *Wishbone
@@ -52,7 +53,7 @@ For story starting scene, read from file (ex.15)
 
 """
 
-from sys import argv
+from sys import argv 
 from sys import exit
 
 #To run this correctly, type python this file name + "/Users/Mac/Documents/jimmy personal/python/ex45op.txt"
@@ -85,8 +86,57 @@ class wishbone(object):
 
 class Death(object):
 
+	dendings = [
+		"Your mama told you not to game",
+		"Your papa told you not to game",
+		"Your dog told you to sit"
+	]
 	
+	def enter(self):
+		print Death.dendings[randint(0, len(self.dendings)-1]
+		exit(1)
+
+class hall(object):
+	
+	dog = []
+	
+	def enter(self):
+		
+		print "Here you train your dogs"
+		print "Which dog?"
+		
+		action = raw_input("> ")
+
+		if action == "Fido":
+			print "Here comes Fido!"
+			dog.append(action)
+		elif action == "Dido":
+			print "Here comes Dido!"
+			dog.append(action)
+		elif action == "Kido":
+			print "Here comes Kido!"
+			dog.append(action) 
+		else: 
+			print "Pick a valid dog name"
 			
+					
+
+class roomr(object):
+
+	def enter(self):
+		script, filenamer = argv
+		
+		txt = open(filenamer)
+		
+		print "Contents of file opened %r: " % filenamer
+		print txt.read()
+	
+		action = raw_input("> ")
+		
+		if action == "roll":
+			print "Yes! You rolled! Good dog!"
+			return 'hall'
+					
 
 	
 
