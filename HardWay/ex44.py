@@ -52,6 +52,7 @@ son.altered()
 
 """
 
+#Composition
 class Parent(object):
 
 	def override(self):

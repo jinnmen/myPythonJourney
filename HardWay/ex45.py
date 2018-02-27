@@ -98,6 +98,9 @@ class Death(object):
 
 class hall(object):
 	
+	return 'dog'
+
+"""	
 	dog = []
 	
 	def enter(self):
@@ -118,8 +121,26 @@ class hall(object):
 			dog.append(action) 
 		else: 
 			print "Pick a valid dog name"
-			
-					
+"""			
+
+class Dog:
+	
+	def __init__(self, name):
+		self.name = name
+		self.tricks = [] # creates a new empty list for each Dog
+	
+	def add_trick(self, trick):
+		self.tricks.append(trick)
+		
+d = Dog('Fido')
+e = Dog('Buddy')
+f = Dog.tricks
+d.add_trick('roll over')
+e.add_trick('play dead')
+
+print d.tricks
+print e.tricks
+
 
 class roomr(object):
 
