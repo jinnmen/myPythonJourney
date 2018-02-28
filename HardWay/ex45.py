@@ -93,7 +93,7 @@ class Death(object):
 	]
 	
 	def enter(self):
-		print Death.dendings[randint(0, len(self.dendings)-1]
+		print Death.dendings[randint(0, len(self.dendings)-1)]
 		exit(1)
 
 class hall(object):
@@ -133,13 +133,19 @@ class Dog:
 		self.tricks.append(trick)
 		
 d = Dog('Fido')
-e = Dog('Buddy')
-f = Dog.tricks
-d.add_trick('roll over')
-e.add_trick('play dead')
+e = Dog('Dido')
+f = Dog('Kido')
+g = Dog.tricks
+trickF = raw_input("Key in a trick for Fido: ")
+trickB = raw_input("Key in a trick for Buddy: ")
+trickK = raw_input("Key in a trick for Kido: ")
+d.add_trick(trickF)
+e.add_trick(trickB)
+f.add_trick(trickK)
 
 print d.tricks
 print e.tricks
+print f.tricks
 
 
 class roomr(object):
@@ -157,7 +163,3 @@ class roomr(object):
 		if action == "roll":
 			print "Yes! You rolled! Good dog!"
 			return 'hall'
-					
-
-	
-
