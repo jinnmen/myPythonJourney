@@ -97,8 +97,9 @@ class Death(object):
 		exit(1)
 
 class hall(object):
-	
-	return 'dog'
+
+	def enter(self):
+		return 'dog'
 
 """	
 	dog = []
@@ -123,7 +124,7 @@ class hall(object):
 			print "Pick a valid dog name"
 """			
 
-class Dog:
+class Dog(object):
 	
 	def __init__(self, name):
 		self.name = name
@@ -132,20 +133,20 @@ class Dog:
 	def add_trick(self, trick):
 		self.tricks.append(trick)
 		
-d = Dog('Fido')
-e = Dog('Dido')
-f = Dog('Kido')
-g = Dog.tricks
-trickF = raw_input("Key in a trick for Fido: ")
-trickB = raw_input("Key in a trick for Buddy: ")
-trickK = raw_input("Key in a trick for Kido: ")
-d.add_trick(trickF)
-e.add_trick(trickB)
-f.add_trick(trickK)
+	d = Dog('Fido')
+	e = Dog('Dido')
+	f = Dog('Kido')
+	g = Dog.tricks
+	trickF = raw_input("Key in a trick for Fido: ")
+	trickB = raw_input("Key in a trick for Buddy: ")
+	trickK = raw_input("Key in a trick for Kido: ")
+	d.add_trick(trickF)
+	e.add_trick(trickB)
+	f.add_trick(trickK)
 
-print d.tricks
-print e.tricks
-print f.tricks
+	print d.tricks
+	print e.tricks
+	print f.tricks
 
 
 class roomr(object):
@@ -163,3 +164,26 @@ class roomr(object):
 		if action == "roll":
 			print "Yes! You rolled! Good dog!"
 			return 'hall'
+
+
+class map(object):
+
+	scenes = {
+		'dog' : Dog(),
+		'hall' : Hall(),
+		'death' : Death()
+		
+	}
+	
+	def __init__(self, start_scene):
+		self.startscene = startscene
+		
+	def next_scene(self, scene_name):
+		return map.scenes.get(scene_name)
+		
+	def opening_scene(self):
+		return self.next_scene(self.start_scene)
+		
+a_map = map('hall')
+a_game = wishbone(a_map)
+a_game.star()	
