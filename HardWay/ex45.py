@@ -170,13 +170,13 @@ class map(object):
 
 	scenes = {
 		'dog' : Dog(),
-		'hall' : Hall(),
+		'hall' : hall(),
 		'death' : Death()
 		
 	}
 	
 	def __init__(self, start_scene):
-		self.startscene = startscene
+		self.start_scene = start_scene
 		
 	def next_scene(self, scene_name):
 		return map.scenes.get(scene_name)
