@@ -53,11 +53,14 @@ For story starting scene, read from file (ex.15)
 
 """
 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from sys import argv 
 from sys import exit
 
 #To run this correctly, type python this file name + "/Users/Mac/Documents/jimmy personal/python/ex45op.txt"
 script, filename = argv
+filename = "/Users/tomokohakata/Documents/jimmy/Python/pyway-master/ex45op.txt"
 
 txt = open(filename)
 
