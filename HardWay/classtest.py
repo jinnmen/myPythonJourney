@@ -1,4 +1,6 @@
 class Human(object):
+	# This will create Human type object
+	
 	
 	def __init__(self):
 		print "Human object is created."
