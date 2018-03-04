@@ -136,20 +136,20 @@ class Dog(object):
 	def add_trick(self, trick):
 		self.tricks.append(trick)
 		
-	d = Dog('Fido')
-	e = Dog('Dido')
-	f = Dog('Kido')
-	g = Dog.tricks
-	trickF = raw_input("Key in a trick for Fido: ")
-	trickB = raw_input("Key in a trick for Buddy: ")
-	trickK = raw_input("Key in a trick for Kido: ")
-	d.add_trick(trickF)
-	e.add_trick(trickB)
-	f.add_trick(trickK)
+d = Dog('Fido')
+e = Dog('Dido')
+f = Dog('Kido')
+g = Dog.tricks
+trickF = raw_input("Key in a trick for Fido: ")
+trickB = raw_input("Key in a trick for Buddy: ")
+trickK = raw_input("Key in a trick for Kido: ")
+d.add_trick(trickF)
+e.add_trick(trickB)
+f.add_trick(trickK)
 
-	print d.tricks
-	print e.tricks
-	print f.tricks
+print d.tricks
+print e.tricks
+print f.tricks
 
 
 class roomr(object):
