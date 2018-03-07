@@ -58,15 +58,6 @@ For story starting scene, read from file (ex.15)
 from sys import argv 
 from sys import exit
 
-#To run this correctly, type python this file name + "/Users/Mac/Documents/jimmy personal/python/ex45op.txt"
-script, filename = argv
-filename = "/Users/tomokohakata/Documents/jimmy/Python/pyway-master/ex45op.txt"
-
-txt = open(filename)
-
-print "Contents of file opened %r: " % filename
-print txt.read()
-
 class Scene(object):
 
 	def enter(self):
@@ -129,17 +120,17 @@ class hall(object):
 
 class Dog(object):
 	
-	def __init__(self, name):
+	def __init__(self, name, tricks):
 		self.name = name
 		self.tricks = [] # creates a new empty list for each Dog
 	
 	def add_trick(self, trick):
 		self.tricks.append(trick)
 		
-d = Dog('Fido')
-e = Dog('Dido')
-f = Dog('Kido')
-g = Dog.tricks
+d = Dog('Fido', 'jump')
+e = Dog('Dido', 'hack')
+f = Dog('Kido', 'slash')
+# g = Dog.tricks
 trickF = raw_input("Key in a trick for Fido: ")
 trickB = raw_input("Key in a trick for Buddy: ")
 trickK = raw_input("Key in a trick for Kido: ")
@@ -155,18 +146,25 @@ print f.tricks
 class roomr(object):
 
 	def enter(self):
-		script, filenamer = argv
+		file = open("/Users/Mac/Documents/jimmy personal/python/ex45op.txt", "r")
+		print file.read()
 		
-		txt = open(filenamer)
-		
-		print "Contents of file opened %r: " % filenamer
-		print txt.read()
-	
 		action = raw_input("> ")
 		
 		if action == "roll":
 			print "Yes! You rolled! Good dog!"
 			return 'hall'
+			
+		
+"""
+Use this only if need to key in file name manually
+		script, filenamer = argv
+		txt = open(filenamer)
+		
+		print "Contents of file opened %r: " % filenamer
+		print txt.read()
+"""
+
 
 
 class map(object):
