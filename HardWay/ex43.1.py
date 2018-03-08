@@ -279,10 +279,77 @@ class Map(object):
 # After Map class, can see storing each scene by name in a dictionary, then refer to
 # that dict with Map.scenes. Also why map comes after scenes because dict has to refer
 # to them so need to exist.
-		
+
+# a_map is an instance of Map and gets 'central_corridor' stored in self.start_scene, refer __init__ of Map
 a_map = Map('central_corridor')
+# a_game = Engine(a_map) makes an instance of Engine handing in this instance a_map.
+# It is stored in self.scene_map , refer to __init__() of Engine.
 a_game = Engine(a_map)
+# calling play finally comes to this line: current_scene = self.scene_map.next_scene(next_scene_name)
+# this means current_scene = CentralCorridor()
 a_game.play()
+
+
 
 # more on classes and explanation of __int__ :
 # https://stackoverflow.com/questions/8609153/why-do-we-use-init-in-python-classes
+# https://stackoverflow.com/questions/34379653/lpthw-ex-43-queries-on-use-of-self
+
+
+"""
+Question
+For this line,
+
+current_scene = self.scene_map.next_scene(next_scene_name)
+I believe this gets from value of CentralCorridor() using the central_corridor key from the dictionary. So it would look something like this:
+
+current_scene = self.scene_map.CentralCorridor()
+What exactly does the self.scene_map do?
+
+
+Answer
+I think the best way, after your read through the implementation of the classes, is to start at the end where the execution begins:
+
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
+So a_map is an instance of Map and gets 'central_corridor' stored in self.start_scene (see __init__() of Map). 
+Next, a_game = Engine(a_map) makes an instance of Engine handing in this instance a_map. 
+It is stored in self.scene_map (see __init__() of Engine). Calling play() on this instance finally comes to this line:
+
+current_scene = self.scene_map.next_scene(next_scene_name)
+It means:
+
+current_scene = CentralCorridor()
+because it retrieves an instance of CentralCorridor from the dictionary scenes in Map, using the key 'central_corridor' via the method next_scene of Map.
+
+The method next_scene() can only be reached via the class Map or an instance of this class. In Engine such an instance is stored in self.scene_map. 
+Therefore, you need to use self.scene_map.next_scene(). 
+Just using next_scene(next_scene_name) will give you a NameError because there is no such function defined. 
+Again, methods in a class are not visible throughout the whole module. They can only be accessed via a class or an instance.
+
+
+Question 2
+For this line,
+
+return self.next_scene(self.start_scene)
+Why is it necessary to specify the self in front of next_return? Why can't it be as follows?
+
+return next_scene(self.start_scene)
+
+Answer 2
+
+While this line works:
+
+return self.next_scene(self.start_scene)
+
+this line does not work:
+
+return next_scene(self.start_scene)
+
+
+because the method next_scene is defined in the class Map. 
+It is not a normal function in the global module space. 
+You can call it either via the class Map.next_scene(a_map, 'name_of_scene') (not often done) or via the instance  a_map.next_scene('name_of_scene'). 
+The self stands for any instance. Therefore, in this case you call a_map.next_scene('name_of_scene').
+"""
