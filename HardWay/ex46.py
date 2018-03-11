@@ -22,7 +22,7 @@ try:
 except ImportError:
 	from distutils.core import setup
 
-config - {
+config = {
 	'description' : 'My Project',
 	'author' : 'My Name',
 	'url' : 'URL to get it at.',
@@ -34,5 +34,21 @@ config - {
 	'scripts' : [],
 	'name' : 'projectname'	
 }
+
+# This is a new file NAME_tests.py
+
+from nose.tools import *
+import NAME
+
+def setup():
+	print "SETUP!"
+	
+def teardown():
+	print "TEAR DOWN!"
+	
+def test_basic():
+	print "I RAN!"
+	
+
 
 setup(**config)
