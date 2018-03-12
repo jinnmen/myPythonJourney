@@ -35,6 +35,8 @@ config = {
 	'name' : 'projectname'	
 }
 
+setup(**config)
+
 # This is a new file NAME_tests.py
 
 from nose.tools import *
@@ -48,7 +50,8 @@ def teardown():
 	
 def test_basic():
 	print "I RAN!"
-	
 
-
-setup(**config)
+"""	
+nose needs to be installed: pip install nose
+disribute and virtualenv needs to be installed the same way too
+"""
