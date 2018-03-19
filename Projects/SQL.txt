@@ -1,0 +1,10 @@
+Useful links:
+https://www.youtube.com/watch?v=bzvEf4s9EOQ
+
+https://dev.mysql.com/doc/employee/en/employees-installation.html
+
+https://www.datapine.com/blog/mysql-data-analysis-example/
+
+http://www.timestored.com/time-series-data/mysql-time-series-sql
+
+https://www.coursera.org/learn/data-cleaning/lecture/njjbw/reading-from-mysql
