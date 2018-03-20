@@ -8,3 +8,17 @@ https://www.datapine.com/blog/mysql-data-analysis-example/
 http://www.timestored.com/time-series-data/mysql-time-series-sql
 
 https://www.coursera.org/learn/data-cleaning/lecture/njjbw/reading-from-mysql
+
+Todays keywords
+SELECT # which columns
+`` # (backtick key on left of number 1)
+FROM # which table
+LIMIT  # how many rows to show
+OFFSET # to show from which ID
+LIMIT 2, 5 # means offset from 2, limit 5 rows
+ORDER BY # Orders by columns, ascending order. Comes before LIMIT, else get error
+ORDER BY `` DESC # To order by descending
+
+Numbers and Excel:
+Vlookup
+INDEX(, MATCH())
