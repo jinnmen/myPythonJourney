@@ -1,5 +1,5 @@
 Useful links:
-https://www.youtube.com/watch?v=bzvEf4s9EOQ
+https://www.youtube.com/watch?v=bws-ZJVGsa4
 
 https://dev.mysql.com/doc/employee/en/employees-installation.html
 
@@ -18,6 +18,7 @@ OFFSET # to show from which ID
 LIMIT 2, 5 # means offset from 2, limit 5 rows
 ORDER BY # Orders by columns, ascending order. Comes before LIMIT, else get error
 ORDER BY `` DESC # To order by descending
+WHERE 1 # Eg: SELECT `first_name`, `last_name FROM `users` WHERE `id` = 14
 
 Numbers and Excel:
 Vlookup
