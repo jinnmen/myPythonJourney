@@ -9,3 +9,5 @@ driver.find_element_by_name("q").send_keys("Automation Step by Step")
 driver.find_element_by_name("btnK").click()
 time.sleep(4)
 driver.quit
+
+print "Test completed successfully"
