@@ -19,6 +19,11 @@ LIMIT 2, 5 # means offset from 2, limit 5 rows
 ORDER BY # Orders by columns, ascending order. Comes before LIMIT, else get error
 ORDER BY `` DESC # To order by descending
 WHERE 1 # Eg: SELECT `first_name`, `last_name FROM `users` WHERE `id` = 14
+AND # With
+LIKE "%" # wildcard/auto fill. Eg: SELECT * FROM `addresses` WHERE `state_province` = "CAL" AND `city` = "South Park City" AND `address_line_1` LIKE "28201 E.%"
+
+How to create SQL table:
+# http://joshualande.com/create-tables-sql
 
 Numbers and Excel:
 Vlookup

@@ -11,3 +11,5 @@ time.sleep(4)
 driver.quit
 
 print "Test completed successfully"
+
+# https://www.youtube.com/watch?v=FFDDN1C1MEQ
