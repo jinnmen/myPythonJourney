@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.keys import Keys
 import time
 
 class GoogleASearch(unittest.TestCase):
@@ -16,7 +16,7 @@ class GoogleASearch(unittest.TestCase):
 		driver.find_element_by_name("btnK").click()
 		time.sleep(4)
 		print "Task complete"
-		driver.close()
+		# driver.close()
 	
 	def tearDown(self):
 		self.driver.close()
