@@ -26,6 +26,11 @@ INNER JOIN # SELECT column_name(s) FROM table1 INNER JOIN table 2 ON table 1.col
 LEFT JOIN # SELECT table1.column1, table2.column2... FROM table1 LEFT OUTER JOIN table2 ON table1.column_name = table2.column.name;
 RIGHT JOIN # SELECT table1.column1, table2.column2... FROM table1 RIGHT OUTER JOIN table2 ON table1.column_name = table2.column_name;
 INSERT INTO # INSERT INTO table_name VALUES(value1,value2,value3,...);
+NOT NULL # None empty table. Eg. CREATE TABLE Users(id int NOT NULL AUTO_INCREMENT, username varchar(40) NOT NULL, password varchar (10) NOT NULL, PRIMARY KEY(id))
+ALTER TABLE # to rename columns, same as below. ALTER TABLE People CHANGE FirstName name varchar(100);
+RENAME TABLE # Eg RENAME TABLE People TO Users;
+CREATE VIEW # makes a new viewable table. Eg. CREATE VIEW view_name AS SELECT column_name(s) FROM table_name WHERE condition;
+
 
 How to create SQL table:
 # http://joshualande.com/create-tables-sql
