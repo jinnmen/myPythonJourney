@@ -1,0 +1,6 @@
+<?php
+?>
+echo
+$string = y
+$y = x
+$$string = x
