@@ -1,0 +1,7 @@
+try
+file.read()
+file.write()
+finally
+except
+assert
+Dictionaries = {x:y} # x = y. Dictionaries and lists are immutable  (can't change)
