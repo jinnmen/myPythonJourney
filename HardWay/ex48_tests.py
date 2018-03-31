@@ -7,3 +7,14 @@ import re
 
 def convert_number(s):
 	try:
+	    return int(s)
+	except ValueError:
+	    return None
+
+def scan(input_str):
+    
+    words = input_str.split('')
+    
+    pattern = re.compile(r'\d+')
+    
+    direction_list = ['north', 'south', ]
