@@ -5,3 +5,14 @@ finally
 except
 assert
 Dictionaries = {x:y} # x = y. Dictionaries and lists are immutable  (can't change)
+
+https://www.reddit.com/r/learnpython/comments/1tmd74/learn_python_the_hard_way_becomes_unbelievably/
+
+Started Codecademy Python
+https://www.codecademy.com/courses/learn-python/lessons/python-syntax/exercises/arithmetic?action=resume_content_item
+py2
+print "Hello, world!"
+print "Waterthere is not a drop of water there! Were Niagara but a cataract of sand, would you travel your thousand miles to see it?"
+
+py3
+print ("Hello World!")
