@@ -1,0 +1,31 @@
+# https://courses.edx.org/courses/course-v1:ColumbiaX+DS101X+1T2017/courseware/83b2b74597c44d858f1cd81edef2faf2/10857aaed5ab4e7a80fb46e9246ca174/1?activate_block_id=block-v1%3AColumbiaX%2BDS101X%2B1T2017%2Btype%40vertical%2Bblock%4027d55c45af694affabb8dd5fe610bfc3
+Modern Data Scientists needs to have 3 main skills:
+i) Computer Science: Algorithms
+ii) Statistics: Inference, Bayesian Statistics, Probability modeling, probability theory.
+iii) Optimization: Knowing how to optimize complicated functions with respect to their parameters.
+
+Need domain expertise
+
+Listening to people in real world speak. (soft skill)
+Then intepreting your machine learning in such a way
+that you can communicate to somebody what you've learned
+by analyzing their data set.
+
+Ability to see how problems of a domain
+can be reframed as machine learning tasks.
+
+Collaboration skills with other people
+who are computational.
+
+Data scientist needs to be able to manage
+large amounts of data, need to be able to program.
+
+Basically need to handle lots of different
+programming languages, more in a scripting sense.
+
+Need to be able to be a data munger and move data around 
+from different platforms and different sources.
+Need to be able to program well.
+Need to process massive amounts of data.
+Need to understand the techniques behind the data science algorithms.
+
