@@ -29,3 +29,7 @@ Need to be able to program well.
 Need to process massive amounts of data.
 Need to understand the techniques behind the data science algorithms.
 
+
+http://datajournalismhandbook.org/1.0/en/understanding_data_0.html
+data-literacy is the ability to consume for knowledge, produce coherently and think critically about data. Data literacy includes statistical literacy but also understanding how to work with large data sets, how they were produced, how to connect various data sets and how to interpret them.
+
