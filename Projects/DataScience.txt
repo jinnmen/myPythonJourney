@@ -33,3 +33,5 @@ Need to understand the techniques behind the data science algorithms.
 http://datajournalismhandbook.org/1.0/en/understanding_data_0.html
 data-literacy is the ability to consume for knowledge, produce coherently and think critically about data. Data literacy includes statistical literacy but also understanding how to work with large data sets, how they were produced, how to connect various data sets and how to interpret them.
 
+Try R! Chap2 onwards
+http://tryr.codeschool.com/levels/2/challenges/1
