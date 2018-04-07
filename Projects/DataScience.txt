@@ -35,3 +35,9 @@ data-literacy is the ability to consume for knowledge, produce coherently and th
 
 Try R! Chap2 onwards
 http://tryr.codeschool.com/levels/2/challenges/1
+
+
+Population
+Random sample -> Random hence good enough to represent overall trend.
+But size wise may not be sufficient to represent whole nation.
+
