@@ -41,3 +41,7 @@ Population
 Random sample -> Random hence good enough to represent overall trend.
 But size wise may not be sufficient to represent whole nation.
 
+Kaggle learning
+https://www.kaggle.com/learn/machine-learning
+https://www.kaggle.com/dansbecker/your-first-scikit-learn-model
+https://www.kaggle.com/leongjm/my-first-machine-learning-model/edit
