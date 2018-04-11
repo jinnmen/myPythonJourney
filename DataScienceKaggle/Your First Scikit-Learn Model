@@ -1,0 +1,61 @@
+Kaggle
+
+**Can someone please let me know what's wrong with my code?**
+
+    import pandas as pd
+    from sklearn.tree import DecisionTreeRegressor
+    
+    data = "../input/house-prices-advanced-regression-techniques/train.csv"
+    mymodel_data = pd.read_csv(data)
+    mymodel_data = mymodel_data.dropna(axis = 0)
+    
+    y = mymodel_data.SalePrice
+    
+    mymodel_predictors = ['LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
+    
+    X = mymodel_data[mymodel_predictors]
+    
+    mymodel_model = DecisionTreeRegressor()
+    
+    mymodel_model.fit(X, y)
+    
+    print ("Making predictions for the first 5 houses")
+    
+    print ("The predictions are:")
+    
+    print (mymodel_model.predict(X.head()))
+
+Error received:
+
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-2-1ec712084e18> in <module>()
+     14 mymodel_model = DecisionTreeRegressor()
+     15 
+---> 16 mymodel_model.fit(X, y)
+     17 
+     18 print ("Making predictions for the first 5 houses")
+
+/opt/conda/lib/python3.6/site-packages/sklearn/tree/tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+   1122             sample_weight=sample_weight,
+   1123             check_input=check_input,
+-> 1124             X_idx_sorted=X_idx_sorted)
+   1125         return self
+   1126 
+
+/opt/conda/lib/python3.6/site-packages/sklearn/tree/tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+    114         random_state = check_random_state(self.random_state)
+    115         if check_input:
+--> 116             X = check_array(X, dtype=DTYPE, accept_sparse="csc")
+    117             y = check_array(y, ensure_2d=False, dtype=None)
+    118             if issparse(X):
+
+/opt/conda/lib/python3.6/site-packages/sklearn/utils/validation.py in check_array(array, accept_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, warn_on_dtype, estimator)
+    460                              " minimum of %d is required%s."
+    461                              % (n_samples, shape_repr, ensure_min_samples,
+--> 462                                 context))
+    463 
+    464     if ensure_min_features > 0 and array.ndim == 2:
+
+ValueError: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required.
+
