@@ -7,7 +7,7 @@ Kaggle
     
     data = "../input/house-prices-advanced-regression-techniques/train.csv"
     mymodel_data = pd.read_csv(data)
-    mymodel_data = mymodel_data.dropna(axis = 0)
+    mymodel_data = mymodel_data.dropna(axis = 0) # Change axis = 1 to solve problem
     
     y = mymodel_data.SalePrice
     
