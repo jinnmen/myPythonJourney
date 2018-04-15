@@ -1,0 +1,9 @@
+Understanding Kaggle and Data Science
+https://www.youtube.com/watch?v=jmHbS8z57yI
+https://www.youtube.com/watch?v=PTykSb6hqro
+
+1. Explore the data: history, cross plots, correrarogram , how its collected.
+2. Creating features: Parlance- feature engineering, synthetitc variables. 
+Coming up with a good hypothesis which translates the data well.
+3. Parameter tuning and emsembling: Classifier. RandomForest, Gradient Boosting Machines.
+Extreme boost. MS by GBM,
