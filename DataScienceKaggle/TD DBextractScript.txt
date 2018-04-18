@@ -1,0 +1,32 @@
+# TreasureData DB script to extract time. One method.
+
+SELECT "time" 
+	, td_time_format(time, 'yyyy-MM-dd HH:mm:ss', 'jst') as jst_date
+	, td_time_format(time, 'HH', 'jst') as jst_hour
+	, if(td_time_format(time, 'HH', 'jst')= '24', 1, 0) as is_visit_24
+	, if(td_time_format(time, 'HH', 'jst')= '23', 1, 0) as is_visit_23
+	, if(td_time_format(time, 'HH', 'jst')= '22', 1, 0) as is_visit_22
+	, if(td_time_format(time, 'HH', 'jst')= '21', 1, 0) as is_visit_21
+	, if(td_time_format(time, 'HH', 'jst')= '20', 1, 0) as is_visit_20
+	, if(td_time_format(time, 'HH', 'jst')= '19', 1, 0) as is_visit_19
+	, if(td_time_format(time, 'HH', 'jst')= '18', 1, 0) as is_visit_18
+	, if(td_time_format(time, 'HH', 'jst')= '17', 1, 0) as is_visit_17
+	, if(td_time_format(time, 'HH', 'jst')= '16', 1, 0) as is_visit_16
+	, if(td_time_format(time, 'HH', 'jst')= '15', 1, 0) as is_visit_15
+	, if(td_time_format(time, 'HH', 'jst')= '14', 1, 0) as is_visit_14
+	, if(td_time_format(time, 'HH', 'jst')= '13', 1, 0) as is_visit_13
+	, if(td_time_format(time, 'HH', 'jst')= '12', 1, 0) as is_visit_12
+	, if(td_time_format(time, 'HH', 'jst') = '11', 1, 0) as is_visit_11
+    , if(td_time_format(time, 'HH', 'jst') = '10', 1, 0) as is_visit_10
+    , if(td_time_format(time, 'HH', 'jst') = '9', 1, 0) as is_visit_9
+    , if(td_time_format(time, 'HH', 'jst') = '8', 1, 0) as is_visit_8
+    , if(td_time_format(time, 'HH', 'jst') = '7', 1, 0) as is_visit_7
+    , if(td_time_format(time, 'HH', 'jst') = '6', 1, 0) as is_visit_6
+    , if(td_time_format(time, 'HH', 'jst') = '5', 1, 0) as is_visit_5
+    , if(td_time_format(time, 'HH', 'jst') = '4', 1, 0) as is_visit_4
+    , if(td_time_format(time, 'HH', 'jst') = '3', 1, 0) as is_visit_3
+    , if(td_time_format(time, 'HH', 'jst') = '2', 1, 0) as is_visit_2
+    , if(td_time_format(time, 'HH', 'jst') = '1', 1, 0) as is_visit_1  
+    , age_range
+    , sex
+FROM age_sex_training;
