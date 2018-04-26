@@ -30,7 +30,7 @@ NOT NULL # None empty table. Eg. CREATE TABLE Users(id int NOT NULL AUTO_INCREME
 ALTER TABLE # to rename columns, same as below. ALTER TABLE People CHANGE FirstName name varchar(100);
 RENAME TABLE # Eg RENAME TABLE People TO Users;
 CREATE VIEW # makes a new viewable table. Eg. CREATE VIEW view_name AS SELECT column_name(s) FROM table_name WHERE condition;
-
+EXPORTING TO CSV # Using Sequel Pro, click on cog icon at bottom, then click export as Csv after running query.
 
 How to create SQL table:
 # http://joshualande.com/create-tables-sql
@@ -38,3 +38,11 @@ How to create SQL table:
 Numbers and Excel:
 Vlookup
 INDEX(, MATCH())
+
+
+Excluding missing values example:
+select 
+	series_genre.`genre_id`,
+	review.`series_id`
+from 
+	series_genre inner join review on series_genre.`series_id` = review.`series_id`;
