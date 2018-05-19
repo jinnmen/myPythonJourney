@@ -1,0 +1,11 @@
+# Bar charts and categorical data
+
+reviews['province'].value_counts().head(10).plot.bar()
+
+(reviews['province'].value_counts().head(10) / len(reviews)).plot.bar()
+
+reviews['points'].value_counts().sort_index().plot.bar()
+
+# Line charts
+reviews['points'].value_counts().sort_index().plot.line()
+
