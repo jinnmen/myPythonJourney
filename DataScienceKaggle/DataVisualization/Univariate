@@ -9,3 +9,13 @@ reviews['points'].value_counts().sort_index().plot.bar()
 # Line charts
 reviews['points'].value_counts().sort_index().plot.line()
 
+# Area charts
+reviews['points'].value_counts().sort_index().plot.area()
+
+# Histogram
+reviews[reviews['price'] < 200]['price'].plot.hist()
+
+reviews['price'].plot.hist()
+
+reviews[reviews['price'] > 1500]
+
