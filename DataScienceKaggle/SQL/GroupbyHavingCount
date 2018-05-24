@@ -20,3 +20,27 @@ query = """SELECT parent, COUNT(id)
 # to 1 GB by default
 popular_stories = hacker_news.query_to_pandas_safe(query)
 print(popular_stories.head())
+
+
+Revise Qs
+
+
+# Your Code Here
+query2 = """SELECT deleted, COUNT(id)
+            FROM `bigquery-public-data.hacker_news.comments`
+            GROUP BY deleted
+            HAVING deleted = True
+"""
+
+deleted = hacker_news.query_to_pandas_safe(query2)
+print(deleted.head())
+
+# Your Code Here
+query3 = """SELECT deleted, SUM(id)
+            FROM `bigquery-public-data.hacker_news.comments`
+            GROUP BY deleted
+            HAVING deleted = True
+"""
+
+deleted = hacker_news.query_to_pandas_safe(query3)
+print(deleted.head())
