@@ -46,3 +46,15 @@ query = """SELECT EXTRACT(DAY FROM column_with_timestamp)
 
 accidents_by_time = accidents.query_to_pandas_safe(query)
 #error
+
+#Fixed
+# Your Code Here
+query = """SELECT COUNT(consecutive_number), 
+                  EXTRACT(DAY FROM timestamp_of_crash)
+            FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2016`
+            GROUP BY EXTRACT(DAY FROM timestamp_of_crash)
+            ORDER BY COUNT(consecutive_number) DESC
+        """
+accidents_by_day = accidents.query_to_pandas_safe(query)
+
+accidents_by_day.head(10)
