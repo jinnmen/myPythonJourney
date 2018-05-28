@@ -58,3 +58,13 @@ query = """SELECT COUNT(consecutive_number),
 accidents_by_day = accidents.query_to_pandas_safe(query)
 
 accidents_by_day.head(10)
+
+
+# Q2 error:
+# Your Code Here
+query = """SELECT COUNT(consecutive_number),
+                                EXTRACT(hit and run FROM first_harmful_event)
+                    FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2016`
+                    GROUP BY EXTRACT(hit and run FROM first_harmful_event)
+                    ORDER BY COUNT(consecutive_number) DESC
+"""
