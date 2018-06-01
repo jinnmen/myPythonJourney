@@ -12,3 +12,16 @@
     </p>
   </body>
 </html>
+
+<html>
+  <head>
+    <title>My First Array</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $friends = array("a", "b", "c");
+      ?>
+    </p>
+  </body>
+</html>
