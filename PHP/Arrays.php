@@ -55,3 +55,36 @@
     ?>
   </body>
 </html>
+
+<html>
+  <head>
+    <title>Accessing Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $tens = array(10, 20, 30, 40, 50);
+        echo $tens{2};
+      ?>
+    </p>
+  </body>
+</html>
+
+<html>
+  <head>
+    <title>Modifying Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $languages = array("HTML/CSS",
+        "JavaScript", "PHP", "Python", "Java", "Ruby");
+        $languages[1] = "C++";
+        echo $languages{1};
+        // Write the code to modify
+        // the $languages array!
+        
+      ?>
+    </p>
+  </body>
+</html>
