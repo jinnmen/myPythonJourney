@@ -1,4 +1,4 @@
-#https://www.w3schools.com/php/php_form_validation.asp
+/* https://www.w3schools.com/php/php_form_validation.asp */
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,6 +57,17 @@
             $websiteErr = "Invalid URL";
         }
         
+        $comment = test_input($_POST["comment"]);
+        
+        $gender = test_input($_POST["gender"]);
+        
+        function test_input($data){
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        
         ?>
         
         <form method = "post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -81,7 +92,7 @@
             value = "male"> Male
             
             <input type "radio" name "gender"
-            <?php if(isset($gender) && $gender =="other") echo "checked";?>
+            <?php if (isset($gender) && $gender =="other") echo "checked";?>
             value = "other"> Other 
             <span class = "error">* <?php echo $genderErr;?></span>
             <br><br>
