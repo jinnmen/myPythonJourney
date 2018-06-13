@@ -80,7 +80,7 @@
             
             Gender:
             <input type = "radio" name = "gender" <?php if (isset($gender) && $gender == "female") echo "checked";?> value = "female"> Female
-            <input type = "radio" name = "gender" <?php if(isset($gender) && $gender == "male") echo "checked"; ?> value = "male"> Male
+            <input type = "radio" name = "gender" <?php if(isset($gender) && $gender == "male") echo "checked"; ?> value = "Male"> Male
             <input type = "radio" name = "gender" <?php if(isset($gender) && $gender =="other") echo "checked"; ?>value = "other"> Other
             <span class = "error">* <?php echo $genderErr;?></span>
             <br><br>
@@ -99,6 +99,19 @@
         echo $comment;
         echo "<br>";
         echo $gender;
+        ?>
+        
+        <?php
+        /*Email from php: https://www.w3schools.com/php/func_mail_mail.asp */
+        
+        // the message
+        $msg = "Name: $name \nEmail: $email \nWebsite: $website \nComment: $comment \nGender: $gender";
+        
+        //use wordwrap() if lines are longer than 70 chars
+        $msg = wordwrap ($msg, 70);
+        
+		// send email
+		mail("jinnmen.leong@plan-b.co.jp", "Test PHP mail", $msg);        
         ?>
         
     </body>
