@@ -84,7 +84,8 @@
             <input type = "radio" name = "gender" <?php if(isset($gender) && $gender =="other") echo "checked"; ?>value = "other"> Other
             <span class = "error">* <?php echo $genderErr;?></span>
             <br><br>
-            <input type = "submit" name = "submit" value = "Submit">
+            
+        	<input type = "submit" name = "submit" value = "Submit" />
         </form>
         
         <?php
@@ -114,6 +115,12 @@
 		mail("jinnmen.leong@plan-b.co.jp", "Test PHP mail", $msg);        
         ?>
         
+		<?php
+		if (isset($_POST['submit'])){
+  		header("Location: thanks.php");
+		}
+		?>
+
     </body>
     
 </html>
