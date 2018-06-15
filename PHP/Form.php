@@ -115,9 +115,64 @@
 		mail("jinnmen.leong@plan-b.co.jp", "Test PHP mail", $msg);        
         ?>
         
+        
 		<?php
+		// go to thank you page
 		if (isset($_POST['submit'])){
   		header("Location: thanks.php");
+		}
+		?>
+
+		
+		<?php
+		// Send to database: https://www.jotform.com/help/126-How-to-send-Submissions-to-Your-MySQL-Database-Using-PHP
+		function ExtendedAddslash(&$params)
+		{
+			foreach($params as &$var){
+				is_array($var) ?ExtendedAddslash($var): $var = addslashes($var);
+				unset($var);
+			}
+		}
+		
+		ExtendedAddslash($_POST);
+		
+		$submission_id = $_POST['submission_id'];
+		$formID = $_POST['formID'];
+		$ip = $_POST['ip'];
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$website = $_POST['website'];
+		$comment = $_POST['comment'];
+		$gender = $_POST['gender'];
+		
+		$db_host = '127.0.0.1';
+		$db_username = 'root';
+		$db_password = '';
+		$db_name = 'Train1';
+		
+		mysql_connect($db_host, $db_username, $db_password) or die(mysql_error());
+		mysql_select_db($db_name);
+		
+		$query = "SELECT * FROM `formt` WHERE `submission_id` = '$submission_id'";
+		$sqlsearch = mysql_query($query);
+		$resultcount = mysql_numrows($sqlsearch);
+		
+		if(resultcount > 0){
+		
+			mysql_query("UPDATE `table_name` SET
+						`name` = '$name',
+						`email` = '$email',
+						`website` = '$website',
+						`comment` = '$comment',
+						`gender` = '$gender'
+					WHERE `submission_id` = '$submission_id'")
+			or die(mysql_error());
+			
+		} else{
+			
+			mysql_query("INSERT INTO `table_name`(submission_id, formID, IP, name, email, website, comment, gender)
+						VALUES ('$submission_id', '$formID', '$ip', '$name', '$email', '$website', '$comment', '$gender')")
+					or die(mysql_error());
 		}
 		?>
 
