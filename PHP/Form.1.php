@@ -138,6 +138,14 @@
 		
 		$sql =  "INSERT INTO TableName (name, email, website, comment, gender)
 		VALUES ($name, $email, $website, $comment, $gender)";
+		
+		if ($connect -> query($sql) === TRUE){
+		    echo "New record created successfully";
+		} else {
+		    echo "Error: " . $sql . "<br>" . $connect-> error; 
+		}
+		
+		$connect -> close();
 		/*
 		// Send to database: https://www.jotform.com/help/126-How-to-send-Submissions-to-Your-MySQL-Database-Using-PHP
 		function ExtendedAddslash(&$params)
