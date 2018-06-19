@@ -1,0 +1,281 @@
+
+<!-- FORM CSS for PC -->
+<style type="text/css">
+<!--
+body{
+	margin:0px;
+}
+.ms_form_box{
+	font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+	width:670px;
+	height:auto;
+	padding:0px;
+	margin:30px auto;
+}
+.ms_form_header{
+	width:670px;
+	height:28px;
+	line-height:28px;
+	font-size:14px;
+	font-weight:bold;
+	color:#666666;
+	padding:0px;
+	margin:0px;
+	text-align:center;
+	border:solid 1px #c0c0c0;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_capbg0.gif');
+	background-repeat: repeat-x;
+	background-position: 0px 1px;
+}
+.ms_form_footer{
+	width:670px;
+	height:28px;
+	line-height:28px;
+	font-size:11px;
+	padding:0px;
+	margin:0px;
+	text-align:left;
+	color:#666666;
+	border:solid 1px #c0c0c0;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_capbg0.gif');
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+.ms_form_footer .copy{
+	float:left;
+	margin:0px 0px 0px 16px;
+	padding:0px;
+}
+.ms_form_footer .powered_by{
+	float:right;
+	margin:0px 16px 0px 0px;
+	padding:0px;
+	text-align:right;
+}
+.ms_form_footer a:link,
+.ms_form_footer a:visited{
+	color:#666666;
+	text-decoration:none;
+}
+.ms_form_body{
+	width:670px;
+	height:auto;
+	font-size:12px;
+	text-align:center;
+	padding:28px 0px 28px 0px;
+	margin:0px;
+	border-style:none solid none solid;
+	border-width:1px;
+	border-color:#c0c0c0;
+	overflow:hidden;
+}
+.ms_form_body ul.form_list{
+	width:480px;
+	list-style:none;
+	clear:both;
+	margin:0px auto;
+	padding:0px;
+	text-align:left;
+}
+.ms_form_body ul.form_list li.item{
+	clear:both;
+	width:180px;
+	vertical-align:top;
+	padding:10px 0px 0px 22px;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_icon_circle_right.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	border:none;
+	float:left;
+}
+.ms_form_body ul.form_list li.item-nofloat{
+	clear:both;
+	width:100%;
+	vertical-align:top;
+	padding:10px 0px 0px 22px;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_icon_circle_right.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	border:none;
+}
+.ms_form_body ul.form_list li.cont{
+	width:248px;
+	padding:8px 0px 0px 30px;
+	border:none;
+	float:left;
+}
+.ms_form_body ul.form_list li.cont-nofloat{
+	clear:both;
+	width:100%;
+	padding:4px 0px 4px 2px;
+	border:none;
+}
+.ms_form_body ul.form_list li.cont .text{
+	width:100%;
+	height:16px;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body ul.form_list li.cont .text80{
+	width:80px;
+	height:16px;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body ul.form_list li.cont .text40{
+	width:40px;
+	height:16px;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body ul.form_list li.cont .sel{
+	width:100%;
+	height:24px;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body ul.form_list li.cont .sel_auto{
+	width:auto;
+	height:24px;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body .ta{
+	width:100%;
+	font-size:12px;
+	padding:3px;
+	background-color:#f9f9f9;
+	border:solid 1px #c0c0c0;
+}
+.ms_form_body ul.form_list li.cont span.cont_desc,
+.ms_form_body ul.form_list li.cont-nofloat span.cont_desc{
+	font-size:10px;
+	color:#4f4f4f;
+	margin:0px;
+}
+.ms_form_body div.submit_btn{
+	clear:both;
+	text-align:center;
+}
+.ms_form_btn{
+	font-size:12px;
+	color:#666666;
+	font-weight:bold;
+	cursor:pointer;
+	border:0px;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_btn0.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width:165px;
+	height:30px;
+}
+div.ssl_seal {
+	width:100px;
+	height:50px;
+	margin:0px auto 20px auto;
+}
+div.sim_entry_list {
+	width:auto;
+	margin: 16px 85px auto 97px;
+	padding: 12px;
+	border: solid 1px #ff0000;
+	text-align:left;
+}
+div.sim_entry_list span.attention{
+	color: #ff0000;
+}
+div.sim_entry_list ul{
+	width: auto;
+	list-style:none;
+	margin:0px 20px 0px 0px;
+	padding:0px;
+	text-align:left;
+
+}
+div.sim_entry_list ul li{
+	width: auto;
+	vertical-align: top;
+	padding: 10px 0px 0px 22px;
+	background-image : url('http://qkh.y-ml.com/img/ms_cp_icon_text.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+}
+-->
+</style>
+
+<form method="post" action="https://qkh.y-ml.com/_reg">
+	<div class="ms_form_box">
+		<div class="ms_form_header">
+			StepMailTest
+		</div>
+		<div class="ms_form_body">
+			<span style="font-size:11px;"><span style="color:#ff0000;">※</span>は必須項目です</span><br>
+			<ul class="form_list clearfix">
+							<li class="item">メールアドレス<span style="color:#ff0000;">※</span></li>
+							<li class="cont">
+							<input type="text" name="email" value="" class="text"></li>
+							<li class="item">メールアドレス（確認）<span style="color:#ff0000;">※</span></li>
+							<li class="cont">
+							<input type="text" name="email_cfm" value="" class="text"></li>
+							<li class="item">お名前（姓名）<span style="color:#ff0000;">※</span></li>
+							<li class="cont">
+						<span class="cont_desc">姓と名はスペースで区切ってください</span><br>
+							<input type="text" name="name" value="" class="text"></li>
+							<li class="item-nofloat">
+コメント欄						</li>
+							<li class="cont-nofloat">
+							<textarea name="user_comment" class="ta" rows="15"></textarea>
+</li>
+</ul>
+
+			
+			<br>
+
+			<label><input type="radio" name="mode" value="1" checked="">登録</label>&nbsp;&nbsp;
+			<label><input type="radio" name="mode" value="2">解除</label>&nbsp;&nbsp;&nbsp;
+			<input type="submit" name="regist" class="ms_form_btn" value="　送　信　">
+			<div class="submit_btn">
+								<input type="hidden" name="id" value="1">
+								<input type="hidden" name="type" value="5">
+								<input type="hidden" name="charset" value="utf8">
+								
+							</div>
+
+			
+		</div>
+		<div class="ms_form_footer clearfix">
+			<p class="copy">Copyright(c) PLAN-B</p>
+			<p class="powered_by">Powered by <a href="http://www.plan-b.co.jp/" target="_blank">PLAN-B</a></p>
+		</div>
+	</div>
+	<div class="ssl_seal">
+		<!-- ↓このシールは「*.y-ml.com」以外のページでは表示されません -->
+		<script src="//ssif1.globalsign.com/SiteSeal/siteSeal/siteSeal/siteSeal.do?p1=qkh.y-ml.com&amp;p2=SZ100-50&amp;p3=image&amp;p4=ja&amp;p5=V1001&amp;p6=S001&amp;p7=http"></script><span> <a id="aa" href="javascript:ss_open_sub()"><img name="ss_imgTag" border="0" src="//ssif1.globalsign.com/SiteSeal/siteSeal/siteSeal/siteSealImage.do?p1=qkh.y-ml.com&amp;p2=SZ100-50&amp;p3=image&amp;p4=ja&amp;p5=V1001&amp;p6=S001&amp;p7=http&amp;deterDn=" alt="Please click to see profile." oncontextmenu="return false;" galleryimg="no" style="width:100px"></a></span><span id="ss_siteSeal_fin_SZ100-50_image_ja_V1001_S001"></span>
+		<script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_100-50_ja.js" defer="defer"></script>
+		<!-- ↑このシールは「*.y-ml.com」以外のページでは表示されません -->
+
+	</div>
+</form>
+
+
+
