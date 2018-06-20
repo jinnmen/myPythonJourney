@@ -136,7 +136,7 @@
 		    die("Connection failed!: ".$connect->connect_error);
 		} 
 		
-		$sql =  "INSERT INTO TableName (name, email, website, comment, gender)
+		$sql =  "INSERT INTO formt (name, email, website, comment, gender)
 		VALUES ($name, $email, $website, $comment, $gender)";
 		
 		if ($connect -> query($sql) === TRUE){

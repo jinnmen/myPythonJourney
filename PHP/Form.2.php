@@ -5,7 +5,9 @@
         <title>Form test</title>
     </head>
     <body>
+        <form action = "insert.php" method = "post">
         <?php
+
         // define variables and set to empty values
         $nameErr = $emailErr = $genderErr = $websiteErr = "";
         $name = $email = $gender = $comment = $website = "";
@@ -85,7 +87,7 @@
             <span class = "error">* <?php echo $genderErr;?></span>
             <br><br>
             
-        	<input type = "submit" name = "submit" value = "Submit" />
+        	<input type = "submit" name = "submit" value = "Submit"/>
         </form>
         
         <?php
@@ -100,6 +102,9 @@
         echo $comment;
         echo "<br>";
         echo $gender;
+        
+        
+        
         ?>
         
         <?php
@@ -117,108 +122,16 @@
         
         
 		<?php
+		/*
 		// go to thank you page
 		if (isset($_POST['submit'])){
   		header("Location: thanks.php");
-		}
-		?>
-
-		
-		<?php
-		//https://www.w3schools.com/php/php_mysql_insert.asp
-		$servername = "127.0.0.1";
-		$username = "root";
-		$password = "";
-		$dbname = "Train1";
-		
-		$connect = new mysqli($servername, $username, $password, $dbname);
-		if ($connect->connect_error){
-		    die("Connection failed!: ".$connect->connect_error);
-		} 
-		
-		$sql =  "INSERT INTO TableName (name, email, website, comment, gender)
-		VALUES ($name, $email, $website, $comment, $gender)";
-		
-		if ($connect -> query($sql) === TRUE){
-		    echo "New record created successfully";
-		} else {
-		    echo "Error: " . $sql . "<br>" . $connect-> error; 
-		}
-		
-		$connect -> close();
-		/*
-		// Send to database: https://www.jotform.com/help/126-How-to-send-Submissions-to-Your-MySQL-Database-Using-PHP
-		function ExtendedAddslash(&$params)
-		{
-			foreach($params as &$var){
-				is_array($var) ?ExtendedAddslash($var): $var = addslashes($var);
-				unset($var);
-			}
-		}
-		
-		ExtendedAddslash($_POST);
-		
-		$submission_id = $_POST['submission_id'];
-		$formID = $_POST['formID'];
-		$ip = $_POST['ip'];
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$website = $_POST['website'];
-		$comment = $_POST['comment'];
-		$gender = $_POST['gender'];
-		
-		$db_host = '127.0.0.1';
-		$db_username = 'root';
-		$db_password = '';
-		$db_name = 'Train1';
-		
-		mysql_connect($db_host, $db_username, $db_password) or die(mysql_error());
-		mysql_select_db($db_name);
-		
-		$query = "SELECT * FROM `formt` WHERE `submission_id` = '$submission_id'";
-		$sqlsearch = mysql_query($query);
-		$resultcount = mysql_numrows($sqlsearch);
-		
-		if(resultcount > 0){
-		
-			mysql_query("UPDATE `table_name` SET
-						`name` = '$name',
-						`email` = '$email',
-						`website` = '$website',
-						`comment` = '$comment',
-						`gender` = '$gender'
-					WHERE `submission_id` = '$submission_id'")
-			or die(mysql_error());
-			
-		} else{
-			
-			mysql_query("INSERT INTO `table_name`(submission_id, formID, IP, name, email, website, comment, gender)
-						VALUES ('$submission_id', '$formID', '$ip', '$name', '$email', '$website', '$comment', '$gender')")
-					or die(mysql_error());
+  		
 		}
 		*/
 		?>
 
-		<?php
-		// Selecting from database: https://www.w3schools.com/php/php_mysql_select.asp
-		$servername = "127.0.0.1";
-		$username = "root";
-		$password = "";
-		$dbname = "Train1";
-		
-		$connect = mysqli_connect($servername, $username, $password, $dbname);
-		if (!$connect){
-		    die("Connection failed!: ".$connect->connect_error);
-		} 
-		
-		$sql =  "SELECT name, email, website, comment, gender FROM tablename";
-		$result = mysqli_query($connect, $sql);
-		
-		// TBC
-		
-		?>
-
-
+	
     </body>
     
 </html>
