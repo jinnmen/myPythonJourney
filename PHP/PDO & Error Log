@@ -1,0 +1,21 @@
+Search in command line (post login to server via terminal) 
+yum search php71-mbstring
+php71-mbstring.x86_64
+
+php-mysqlnd.x86_64
+php71-pdo.x86_64
+
+yum install all the above.
+
+#to view errors-- Needs to be in directory cd /var/log/httpd/
+tail -f error_log 
+vim error_log to change 
+
+use whereis to find things within terminal for php
+
+eg whereis php.ini
+then go to cd /etc
+vim php.ini
+find keyword error, type n for next search, x for delete a word. 
+Edit log_errors = Off to log_errors = On
+key in “:” then qa to save and quit
