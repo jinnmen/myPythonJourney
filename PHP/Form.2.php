@@ -1,13 +1,19 @@
 /* https://www.w3schools.com/php/php_form_validation.asp */
+
+<?php 		
+//start session so other page can get info here
+session_start();
+?>		
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Form test</title>
     </head>
     <body>
-        <form action = "insert.php" method = "post">
+        <!--<form action = "insertpdo2.php" method = "post">-->
         <?php
-
+		
         // define variables and set to empty values
         $nameErr = $emailErr = $genderErr = $websiteErr = "";
         $name = $email = $gender = $comment = $website = "";
@@ -103,7 +109,12 @@
         echo "<br>";
         echo $gender;
         
-        
+        //set session variables
+        $_SESSION['name'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['website'] = $website;
+        $_SESSION['comment'] = $comment;
+        $_SESSION['gender'] = $gender;
         
         ?>
         
@@ -122,13 +133,13 @@
         
         
 		<?php
-		/*
+		
 		// go to thank you page
 		if (isset($_POST['submit'])){
-  		header("Location: thanks.php");
+  		header("Location: insertpdo2.php");
   		
 		}
-		*/
+		
 		?>
 
 	
