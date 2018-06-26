@@ -15,7 +15,7 @@ try{
 	//set error mode to exception
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql =  "INSERT INTO formt (Name, Email, Website, Comment, Gender)
-		VALUES (" . $_SESSION['name'] . "," . $_SESSION['email'] . "," . $_SESSION['website'] . "," . $_SESSION['comment'] . "," . $_SESSION['gender'] . ")";
+		VALUES (" . $_SESSION['Name'] . "," . $_SESSION['Email'] . "," . $_SESSION['Website'] . "," . $_SESSION['Comment'] . "," . $_SESSION['Gender'] . ")";
 		var_dump($sql);
 		die();
 	//use exec() because no results are returned

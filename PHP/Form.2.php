@@ -88,7 +88,7 @@ session_start();
             
             Gender:
             <input type = "radio" name = "gender" <?php if (isset($gender) && $gender == "female") echo "checked";?> value = "female"> Female
-            <input type = "radio" name = "gender" <?php if(isset($gender) && $gender == "male") echo "checked"; ?> value = "Male"> Male
+            <input type = "radio" name = "gender" <?php if(isset($gender) && $gender == "male") echo "checked"; ?> value = "male"> Male
             <input type = "radio" name = "gender" <?php if(isset($gender) && $gender =="other") echo "checked"; ?>value = "other"> Other
             <span class = "error">* <?php echo $genderErr;?></span>
             <br><br>
@@ -110,11 +110,11 @@ session_start();
         echo $gender;
         
         //set session variables
-        $_SESSION['name'] = $name;
-        $_SESSION['email'] = $email;
-        $_SESSION['website'] = $website;
-        $_SESSION['comment'] = $comment;
-        $_SESSION['gender'] = $gender;
+        $_SESSION['Name'] = $name;
+        $_SESSION['Email'] = $email;
+        $_SESSION['Website'] = $website;
+        $_SESSION['Comment'] = $comment;
+        $_SESSION['Gender'] = $gender;
         
         ?>
         
