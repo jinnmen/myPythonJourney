@@ -1,10 +1,10 @@
 <?php
 //Validating from myform, https://myphpform.com/validating-forms.php
 
-$yourname = htmlspecialchars($_POST['yourname']);
-$email = htmlspecialchars($_POST['email']);
-$likeit = htmlspecialchars($_POST['likeit']);
-$comments = htmlspecialchars($_POST['comments']);
+$yourname = check_input ($_POST['yourname']);
+$email = check_input ($_POST['email']);
+$likeit = check_input ($_POST['likeit']);
+$comments = check_input ($_POST['comments']);
 ?>
 
 <html>
@@ -22,3 +22,12 @@ Comments: <br />
 
 </body>
 </html>
+
+<?php
+function check_input($data){
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+?>
