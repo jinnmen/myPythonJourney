@@ -3,6 +3,17 @@
 
 $yourname = check_input ($_POST['yourname'], "Enter your name!");
 $email = check_input ($_POST['email'], "Enter your email!");
+$email = htmlspecialchars($_POST['email']);
+if (!preg_match("/([\w\-]+[\w\-]+\.[\w\-]+)/", $email))
+{
+	die("E-mail address not valid");
+}
+$url = check_input($_POST['url'], "Enter a valid URL");
+$url = htmlspecialchars($_POST['website']);
+if (!preg_match("/^(https?:\/\/+[\w\-]+[\w\-]+/i)",$url))
+{
+	die("URL address not valid");
+}
 $likeit = check_input ($_POST['likeit'], "Choose one!");
 $comments = check_input ($_POST['comments'], "Key in something!");
 ?>
