@@ -1,22 +1,23 @@
 <?php
 
-// initial
+// initial first
 $error_lists = [];
 
 // get paramas
 $name = $_POST["name"];
 $mailaddress = $_POST["mailaddress"];
 
-// valdation
+// valdation for string length more than 10 then error
 if (strlen($name) > 10) {
     $error_lists[] = "name string over.";
 }
 
+//checks if mail is valid. i.e. has @, . etc
 if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $mailaddress)) {
     $error_lists[] = "mailaddress syntax error.";
 }
 
-// error check
+// error check -> Error on html?
 if (!empty($error_lists)) {
 
     $error_html = "<ul>";
@@ -24,7 +25,7 @@ if (!empty($error_lists)) {
         $error_html .= "<li>" . $value . "</li>";
     }
     $error_html .= "</ul>";
-
+//Why is there a ' below?
     $html = '
 <!DOCTYPE html>
 <html lang="jp">
@@ -59,11 +60,13 @@ if (!empty($error_lists)) {
   <title>Document</title>
 </head>
 <body>
+<!--form sends to send.php page, posts the information there, sets name as test -->
   <form action="send.php" method="post" name="test">
     name : <?php echo $name; ?> <br />
     mailaddress : <?php echo $mailaddress; ?> <br />
     <input type="submit" name="submit" value="send" /><br />
   </form>
+<!--form sends to input.php page, posts the information there, sets name as test? -->
   <form action="input.php" method="post" name="test">
     <input name="name" type="hidden" value="<?php echo $name; ?>" />
     <input name="mailaddress" type="hidden" value="<?php echo $mailaddress; ?>" />
