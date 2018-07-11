@@ -36,8 +36,9 @@ if (!empty($error_lists)) {
   <title>Document</title>
 </head>
 <body>
-  <form action="confirm.php" method="post" name="test">';
+  <form action="confirm.php" method="post" name="test">'; //ends here
 
+//combines string
     $html .= $error_html;
 
     $html .= '
@@ -62,13 +63,13 @@ if (!empty($error_lists)) {
   <title>Document</title>
 </head>
 <body>
-<!--form sends to send.php page, posts the information there, sets name as test -->
+<!--Button for form sends to send.php page, posts the information there, sets name as test -->
   <form action="send.php" method="post" name="test">
     name : <?php echo $name; ?> <br />
     mailaddress : <?php echo $mailaddress; ?> <br />
     <input type="submit" name="submit" value="send" /><br />
   </form>
-<!--form sends to input.php page, posts the information there, sets name as test? -->
+<!--Button for form sends to input.php page, posts the information there, sets name as test? -->
   <form action="input.php" method="post" name="test">
     <input name="name" type="hidden" value="<?php echo $name; ?>" />
     <input name="mailaddress" type="hidden" value="<?php echo $mailaddress; ?>" />

@@ -7,5 +7,5 @@ $mailaddress = $_POST["mailaddress"];
 // mail
 mail($mailladdress, "subject", "message: " . $name);
 
-// redirect
+// redirect. Http header.
 header("location: thnks.php");
