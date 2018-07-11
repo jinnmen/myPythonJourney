@@ -1,4 +1,5 @@
 <?php
+//Must include empty lines if file in .php?
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,7 @@
   <title>Document</title>
 </head>
 <body>
+<!--Text printed in html after sending mail -->
   mail send ok.
   <br />
   <a href="input.php"> return input form.</a>
