@@ -44,31 +44,57 @@ if (!empty($_POST["comment2"])){
 <!--form sends to confirm.php page, posts the information there, sets name as test -->
   <form action="confirm.php" method="post" name="test">
 <div class = "container">
-<div class = "col-sm">
+ <div class = "row align-items-center">
   <!--prints html "name", then allows input, name and value. Then echos name in php -->
-    name: <input type="text" name="name" value="<?php echo $name; ?>" /><br />
+    <p>name: </p> 
+<div class = "row justify-content-center">
+  <div class = "col"> 
+    <input type="text" name="name" value="<?php echo $name; ?>" /><br />
+    </div>
 </div>
+</div>
+
   <!--prints html "mailaddress", then allows input, name and value. Then echos mailaddress in php -->
-<div class = "col-sm">
-    mailaddress: <input type="text" name="mailaddress" value="<?php echo $mailaddress; ?>" /><br />
+ <div class = "row align-items-center">
+    mailaddress: 
+ <div class = "col">
+    <input type="text" name="mailaddress" value="<?php echo $mailaddress; ?>" /><br />
 </div>
   <!--prints html "url", then allows input, name and value. Then echos url in php -->
-<div class = "col-sm">
-	website url: <input type = "text" name = "url" value ="<?php echo $url ; ?>" /><br />
+</div>
+
+ <div class = "row align-items-center">
+	website url: 
+<div class = "col">	
+	<input type = "text" name = "url" value ="<?php echo $url ; ?>" /><br />
 </div>
   <!--prints html "comment", then allows input, name and value. Then echos comment in php . input type only shows 1 row-->
-<div class = "col-sm">
-	comment1: <input type = "text"  name = "comment1" rows = "5" cols = "40" value= "<?php echo $comment1 ; ?>" /><br />
+</div>
+
+ <div class = "row align-items-center">
+	comment1: 
+<div class = "col">	
+	<input type = "text"  name = "comment1" rows = "5" cols = "40" value= "<?php echo $comment1 ; ?>" /><br />
 </div>
   <!--prints html "comment", then allows input, name and value. Then echos comment in php . textarea shows text box but need to close bracket early. no need to use value-->
-<div class = "col-sm">
-	comment2: <textarea name = "comment2" rows = "5" cols = "40"> <?php echo $comment2 ;?> </textarea> <br />
 </div>
+
+ <div class = "row align-items-center">
+	comment2: 
+<div class = "col">	
+	<textarea name = "comment2" rows = "5" cols = "40"> <?php echo $comment2 ;?> </textarea> <br />
+</div>
+</div>
+
+<div class = "row align-items-center">
   <!--shows submit button, then saves name and value. -->
-<div class = "col-sm">
+<div class = "col">
     <input type= "Submit" class = "btn btn-primary" name = "submit" value = "submit"> 
 </div>
     <!-- <input type="submit" name="submit" value="submit" /><br /> -->
+</div>
+
+</div>
 
   </form>
   <!--Bootstrap contents. In order of jQuery, Popper.js, JavaScript -->
