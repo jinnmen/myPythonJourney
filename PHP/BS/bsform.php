@@ -14,7 +14,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
    <body>
 	  <div class = "container">
 	  
-
+<!-- tried to put into single row but alignment goes off-->
       
       <div class = "row">
          <div class = "col-md-2"></div>
