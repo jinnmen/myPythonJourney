@@ -49,7 +49,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
       <div class = "row">
          <div class = "col-md-2"></div>
       </div>
-      <form>
+      <form method = "post" name = "test">
          <div class = "row justify-content-center">
             <div class = "col-md-8">
 
@@ -60,11 +60,11 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
 
               	<div class = "row justify-content-center">
               	<div class = "col-md-4">
-                 <label for="nameInput">Name</label>
+                 <label for="name">Name</label>
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="name" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter Name" value= "<?php echo $name; ?>">
+                 <input type="input" name = "name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Name" value= "<?php echo $name; ?>">
 
                  </div>
                  </div>
@@ -77,7 +77,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+                 <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" value= "<?php echo $email; ?>" />
                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                  </div>
                  </div>
@@ -89,7 +89,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
               </div>
 
               <div class = "col-md-4">
-              <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+              <input type="password" class="form-control" id="passwordInput" placeholder="Password" value= "<?php echo $password; ?>" />
 
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -97,13 +97,15 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
                 </div>
                 </div>
 
+								 </div>      <!--Closing for row justify content center -->
+
               	<div class = "row justify-content-center">
               	<div class = "col-md-4">
                  <label for="urlInput">Website URL</label>
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="url" class="form-control" id="urlInput" aria-describedby="urlHelp" placeholder="Enter URL">
+                 <input type="url" class="form-control" id="urlInput" aria-describedby="urlHelp" placeholder="Enter URL" value= "<?php echo $url; ?>" />
 
                  </div>
                  </div>
@@ -114,18 +116,18 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="comment" class="form-control" id="commentInput" aria-describedby="commentHelp" placeholder="Enter Comment">
+                 <input type="comment" class="form-control" id="commentInput" aria-describedby="commentHelp" placeholder="Enter Comment" value= "<?php echo $comment; ?>" />
 
                  </div>
                  </div>
 
-              </div>      <!--Closing for row justify content center -->
 
+								 <br />
 
               <div class = "row justify-content-center">
               <button type="submit" class="btn btn-primary">Submit</button>
               </div>
-							</div>
+						</div> <!-- closing for form-group -->
            </div> <!--closing for col md 8 -->
          </div>
       </form>
