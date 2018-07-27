@@ -18,6 +18,10 @@ if (!empty($_POST["password"])){
 	$password = $_POST["password"];
 }
 
+if (!empty($_POST["form_check_1"])){
+	$form_check_1 = $_POST["form_check_1"];
+}
+
 if (!empty($_POST["url"])){
 	$url = $_POST["url"];
 }
@@ -73,11 +77,11 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
 
               	<div class = "row justify-content-center">
               	<div class = "col-md-4">
-                 <label for="emailInput">Email address</label>
+                 <label for="email">Email address</label>
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" value= "<?php echo $email; ?>" />
+                 <input type="input" name= "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value= "<?php echo $email; ?>" />
                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                  </div>
                  </div>
@@ -85,14 +89,14 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
 
               <div class = "row justify-content-center">
               <div class = "col-md-4">
-              <label for="passwordInput">Password</label>
+              <label for="password">Password</label>
               </div>
 
               <div class = "col-md-4">
-              <input type="password" class="form-control" id="passwordInput" placeholder="Password" value= "<?php echo $password; ?>" />
+              <input type="password" name = "password" class="form-control" id="password" placeholder="Password" value= "<?php echo $password; ?>" />
 
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" name= "passcheck" class="form-check-input" id="exampleCheck1" value = "<?php if(isset($_POST['passcheck'])) echo "checked = 'checked'"; ?>" />
                 <label class="form-check-label" for="exampleCheck1">Agree to T&Cs</label>
                 </div>
                 </div>
@@ -101,22 +105,22 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
 
               	<div class = "row justify-content-center">
               	<div class = "col-md-4">
-                 <label for="urlInput">Website URL</label>
+                 <label for="url">Website URL</label>
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="url" class="form-control" id="urlInput" aria-describedby="urlHelp" placeholder="Enter URL" value= "<?php echo $url; ?>" />
+                 <input type="url" name = "url" class="form-control" id="url" aria-describedby="urlHelp" placeholder="Enter URL" value= "<?php echo $url; ?>" />
 
                  </div>
                  </div>
 
                 <div class = "row justify-content-center">
               	<div class = "col-md-4">
-                 <label for="commentInput">Comment</label>
+                 <label for="comment">Comment</label>
                  </div>
 
                  <div class = "col-md-4">
-                 <input type="comment" class="form-control" id="commentInput" aria-describedby="commentHelp" placeholder="Enter Comment" value= "<?php echo $comment; ?>" />
+                 <input type="comment" name = "comment" class="form-control" id="comment" aria-describedby="commentHelp" placeholder="Enter Comment" value= "<?php echo $comment; ?>" />
 
                  </div>
                  </div>
