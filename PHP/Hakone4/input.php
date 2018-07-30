@@ -18,8 +18,8 @@ if (!empty($_POST["password"])){
 	$password = $_POST["password"];
 }
 
-if (!empty($_POST["form_check_1"])){
-	$form_check_1 = $_POST["form_check_1"];
+if (!empty($_POST["passcheck"])){
+	$form_check_1 = $_POST["passcheck"];
 }
 
 if (!empty($_POST["url"])){
@@ -48,6 +48,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
       <title> Form with BS </title>
    </head>
    <body>
+		 <form action = "confirm.php" method = "post" name = "confirmed">
 	  <div class = "container">
 
       <div class = "row">
@@ -96,8 +97,8 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
               <input type="password" name = "password" class="form-control" id="password" placeholder="Password" value= "<?php echo $password; ?>" />
 
               <div class="form-group form-check">
-                <input type="checkbox" name= "passcheck" class="form-check-input" id="exampleCheck1" value = "<?php if(isset($_POST['passcheck'])) echo "checked = 'checked'"; ?>" />
-                <label class="form-check-label" for="exampleCheck1">Agree to T&Cs</label>
+                <input type="checkbox" name= "passcheck" class="form-check-input" id="passcheck" value = "<?php if(isset($_POST['passcheck'])) echo "checked"; ?>" />
+                <label class="form-check-label" for="passcheck">Agree to T&Cs</label>
                 </div>
                 </div>
 
@@ -140,6 +141,7 @@ Grid: https://getbootstrap.com/docs/4.1/layout/grid/
       </div>
 
       </div>
+			</form?
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
