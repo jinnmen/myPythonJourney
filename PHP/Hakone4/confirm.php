@@ -78,15 +78,68 @@ if (!empty($error_lists)) {
   <div class = "col-md-2">
   </div>
 
+  <div class = "row justify-content-center">
+     <div class = "col-md-8">
+
+       <div class="form-group">
+         <div class = "row justify-content-center">
+      <h1> Confirm.php page! </h1>
+         </div>
+
 <!--Button for form sends to send.php page, posts the information there, sets name as test -->
   <form action="send.php" method="post" name="test">
-    Name : <?php echo $name; ?> <br />
-    Email : <?php echo $email; ?> <br />
-    Password: <?php echo $password ;?> <br />
-    $url : <?php echo $url; ?> <br />
-    $comment: <?php echo $comment ?> <br />
-    <input type="submit" name="submit" value="send" /><br />
-  </form>
+
+    <div class = "row justify-content-center">
+    <div class = "col-md-4">
+    Name :
+    </div>
+    <div class = "col-md-4">
+    <?php echo $name; ?> <br />
+  </div>
+</div>
+
+                <div class = "row justify-content-center">
+      <div class = "col-md-4">
+    Email :
+  </div>
+        <div class = "col-md-4">
+    <?php echo $email; ?> <br />
+  </div>
+</div>
+
+  <div class = "row justify-content-center">
+    <div class = "col-md-4">
+    Password:
+</div>
+<div class = "col-md-4">
+    <?php echo $password ;?> <br />
+  </div>
+</div>
+
+<div class = "row justify-content-center">
+  <div class = "col-md-4">
+    Url :
+  </div>
+  <div class = "col-md-4">
+    <?php echo $url; ?> <br />
+  </div>
+</div>
+
+    <div class = "row justify-content-center">
+    <div class = "col-md-4">
+    Comment:
+  </div>
+    <div class = "col-md-4">
+    <?php echo $comment ?> <br />
+  </div>
+</div>
+
+    <div class = "row justify-content-center">
+    <div class = "col-md-4">
+    <input type="submit" name="submit" value="send" />
+  </div>
+    </form>
+
 <!--Button for form sends to input.php page, posts the information there, sets name as test? -->
   <form action="input.php" method="post" name="test">
     <input name="name" type="hidden" value="<?php echo $name; ?>" />
@@ -94,12 +147,15 @@ if (!empty($error_lists)) {
     <input name="password" type ="hidden" value = "<?php echo $password; ?>" />
     <input name="url" type = "hidden" value = "<?php echo $url; ?>" />
     <input name ="comment" type = "hidden" value = "<?php echo $comment; ?>" />
+      <div class = "col-md-4">
     <input type="submit" name="submit" value="back" />
+  </div>
 
     <div class = "col-md-2">
     </div>
-
   </div>
+</div>
+</div>
   </form>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
