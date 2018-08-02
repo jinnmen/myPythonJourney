@@ -8,7 +8,7 @@ $url = $_POST["url"];
 $comment = $_POST["comment"];
 
 // mail, .  operator is concatenation
-mail($mailladdress, "subject", "message: " . $name);
+mail($email, "subject", "message: " . $name);
 
 // redirect. Http header.
 header("location: thanks.php");
