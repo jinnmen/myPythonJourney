@@ -136,7 +136,7 @@ if (!empty($error_lists)) {
 
     <div class = "row justify-content-center">
     <div class = "col-md-4">
-    <input type="submit" name="submit" value="send" />
+    <input type="submit" name="submit" class="btn btn-primary" value="send" />
   </div>
     </form>
 
@@ -148,7 +148,7 @@ if (!empty($error_lists)) {
     <input name="url" type = "hidden" value = "<?php echo $url; ?>" />
     <input name ="comment" type = "hidden" value = "<?php echo $comment; ?>" />
       <div class = "col-md-4">
-    <input type="submit" name="submit" value="back" />
+    <input type="submit" name="submit" class="btn btn-primary" value="back" />
   </div>
 
     <div class = "col-md-2">
