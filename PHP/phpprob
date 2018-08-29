@@ -3,3 +3,12 @@ Had problems with AWS php running today.
 https://forums.aws.amazon.com/thread.jspa?threadID=244772
 
 To check further on solutions
+
+
+https://laracasts.com/series/laravel-from-scratch-2017/episodes/3?autoplay=true
+Managed to set up valet after stopping docker comee
+https://qiita.com/Dok1211/items/1041e857862eb18e69df
+
+Tried changing domain from .test (default) to .dev but did not work well.
+To investigate
+
