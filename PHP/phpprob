@@ -14,3 +14,9 @@ To investigate
 
 PHP mysql 8.0.11 problem solved
 https://www.farces.com/wrestling-with-the-mysql-8-0-11-bear/
+
+When trying to mv composer but /usr/bin/local shows as No such file or directory
+1. echo $PATH to check whether the folder is there. If it is, just need to create a new /usr/bin/local directory.
+sudo mkdir -p /usr/bin/local
+https://stackoverflow.com/questions/11284003/why-isnt-this-file-being-copied-to-my-path
+
