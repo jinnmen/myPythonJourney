@@ -20,3 +20,6 @@ When trying to mv composer but /usr/bin/local shows as No such file or directory
 sudo mkdir -p /usr/bin/local
 https://stackoverflow.com/questions/11284003/why-isnt-this-file-being-copied-to-my-path
 
+Edit path permanently then recompile if laravel doesnt work
+echo "export PATH=$HOME/.composer/vendor/bin:$PATH" >> ~/.bash_profile
+source ~/.bashrc
