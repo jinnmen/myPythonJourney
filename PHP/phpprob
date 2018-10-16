@@ -32,3 +32,4 @@ https://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 if need stronger permission use sudo
 
+Test : Open entire directory go to directory in terminal then use "sublime ."
