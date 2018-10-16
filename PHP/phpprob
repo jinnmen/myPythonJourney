@@ -20,6 +20,15 @@ When trying to mv composer but /usr/bin/local shows as No such file or directory
 sudo mkdir -p /usr/bin/local
 https://stackoverflow.com/questions/11284003/why-isnt-this-file-being-copied-to-my-path
 
-Edit path permanently then recompile if laravel doesnt work
+Edit path permanently then recompile if laravel doesnt work. 
+Notes:If you modify the $PATH variable this way, it's temporary. To change it permanently, you need to edit a specific system file and save it.
 echo "export PATH=$HOME/.composer/vendor/bin:$PATH" >> ~/.bash_profile
 source ~/.bashrc
+
+Creating a shortcut to sublime from terminal
+symlink
+https://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/
+
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+if need stronger permission use sudo
+
