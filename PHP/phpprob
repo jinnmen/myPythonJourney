@@ -33,3 +33,9 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 if need stronger permission use sudo
 
 Test : Open entire directory go to directory in terminal then use "sublime ."
+
+sublime shortcut key "command p" for fuzzy search.
+Important files within laravel folders for web html editing -> rweb (web.php). Also v/welcome (welcome.blade.php).
+
+PHP migrate SQLSTATE 1045 error (still investigating)
+https://stackoverflow.com/questions/50994393/laravel-php-artisan-migrate
