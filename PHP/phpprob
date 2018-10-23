@@ -39,3 +39,19 @@ Important files within laravel folders for web html editing -> rweb (web.php). A
 
 PHP migrate SQLSTATE 1045 error (still investigating)
 https://stackoverflow.com/questions/50994393/laravel-php-artisan-migrate
+
+
+Finally managed to migrate!
+Issue was with .env username and password , need to ensure it's the same as username and password for MYSQL.
+
+Can't connect to sequel pro issue.
+Need to change caching 2 password type to mysql_native_password 
+mysql> ALTER USER 'root'@"localhost" IDENTIFIED WITH mysql_native_password BY '';
+SQL must always end with ;
+https://qiita.com/r641y/items/7f0ca12ced72363f9448
+
+To check if migration successful, log into mysql then :
+use blog;
+show tables;
+
+should see 3 rows now.
