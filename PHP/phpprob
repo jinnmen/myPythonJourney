@@ -55,3 +55,6 @@ use blog;
 show tables;
 
 should see 3 rows now.
+
+To create https secure page with laravel valet type this in the desired folder:
+valet secure 
