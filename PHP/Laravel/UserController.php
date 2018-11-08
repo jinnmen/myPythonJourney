@@ -16,7 +16,7 @@ class UserController extends Controller
 	{
 
 		print_r($request->input());
-		$result = DB::insert("insert into test(name,email) values(?, ?)", [$request->input('name'), $request->input('email')]);
+		$result = DB::insert("insert into test1(name,email) values(?,?)", [$request->input('name'), $request->input('email')]);
 		echo $result;
 
 	}

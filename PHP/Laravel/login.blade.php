@@ -2,7 +2,7 @@
 
 /// init. "" = String goes in. If int start with 0 or null or []. 
 $name = "";
-$mailaddress = "";
+$email = "";
 $url = "";
 $comment1 = "";
 $comment2 = "";
@@ -11,8 +11,8 @@ $comment2 = "";
 if (!empty($_POST["name"])) {
     $name = $_POST["name"];
 }
-if (!empty($_POST["mailaddress"])) {
-    $mailaddress = $_POST["mailaddress"];
+if (!empty($_POST["email"])) {
+    $email = $_POST["email"];
 }
 if (!empty($_POST["url"])){
 	$url = $_POST["url"];
@@ -45,8 +45,8 @@ if (!empty($_POST["comment2"])){
   <form action="{{URL::to('/store')}}" method="post" name="test">
   <!--prints html "name", then allows input, name and value. Then echos name in php -->
     name: <input type="text" name="name" value="<?php echo $name; ?>" /><br />
-  <!--prints html "mailaddress", then allows input, name and value. Then echos mailaddress in php -->
-    mailaddress: <input type="text" name="mailaddress" value="<?php echo $mailaddress; ?>" /><br />
+  <!--prints html "email", then allows input, name and value. Then echos email in php -->
+    email: <input type="text" name="email" value="<?php echo $email; ?>" /><br />
   <!--prints html "url", then allows input, name and value. Then echos url in php -->
 	website url: <input type = "text" name = "url" value ="<?php echo $url ; ?>" /><br />
   <!--prints html "comment", then allows input, name and value. Then echos comment in php . input type only shows 1 row-->
