@@ -1,0 +1,9 @@
+https://qiita.com/ponko2/items/fd7ac38b964e10f16f52
+Making a form
+
+before migration can be done, database table must be created.
+Go to -> mysql -uroot
+Then type " create database ...." 
+then go back to root folder to migrate-> "php artisan migrate" 
+Success
+
