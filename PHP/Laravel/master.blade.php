@@ -1,4 +1,4 @@
-<!--should move to views/layouts folder? -->
+<!--should move to views/layouts folder? Below is shared section-->
 
 <!DOCTYPE html>
 <html lang ="{{ App::getLocale() }}">
@@ -16,3 +16,11 @@
 		<![endif]-->
 	</head>
 	<body class = "@yield('body-class')">
+		<div class="container">
+			@yield('content')
+		</div>
+		@section("scripts")
+			<script src = "{{ elixir('js/main.js') }}"></script>
+		@show
+	</body>
+</html>
