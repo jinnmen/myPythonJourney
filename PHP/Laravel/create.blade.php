@@ -65,6 +65,8 @@
          <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4" style="margin-left:38px">
+
+              <label>Exchanges: </label>
                <div class="checkbox">
                   <label><input type="checkbox" value="coindesk" name="option[]">Coindesk</label>
                </div>
