@@ -41,6 +41,8 @@ class FormController extends Controller
         $request->validate([
             'coinname' => 'required',
             'coinprice'=> 'required|numeric',
+            'radio'=> 'required',
+            'option'=>'required',
         ]);
 
         $form = new Form();
@@ -74,6 +76,8 @@ class FormController extends Controller
     public function edit($id)
     {
         //
+        $form = Form::find($id);
+        return view('edit',compact('form','id'));
     }
 
     /**
@@ -86,7 +90,24 @@ class FormController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'coinname' => 'required',
+            'coinprice'=> 'required|numeric',
+            'radio'=> 'required',
+            'option'=>'required',
+        ]);
+
+        $form = new Form();
+        $form->coinname=$request->get('coinname');
+        $form->coinprice=$request->get('coinprice');
+        $checkbox = implode(",", $request->get('option'));
+        $form->dropdown=$request->get('dropdown');
+        $form->radio=$request->get('radio');
+        $form->checkbox = $checkbox;
+        $form-> save();
+        return redirect('forms')->with('success', 'Coin has been edited');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -96,6 +117,8 @@ class FormController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $form = form::find($id);
+        $form->delete();
+        return redirect('forms')->with('success','Coin has been deleted');
     }
 }
