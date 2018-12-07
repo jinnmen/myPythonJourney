@@ -1,4 +1,4 @@
-<!-- create.blade.php -->
+<!-- index.blade.php -->
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,8 @@
   			<td>
   				<form action="{{action('FormController@destroy', $form['id'])}}" method="post">
   					{{csrf_field()}}
-  					<input type="hidden" name="method" value="DELETE">
+            {{ method_field('DELETE')}}
+  					<!--<input name="method" type="hidden" value="DELETE">-->
   					<button class="btn btn-danger" type="submit">DELETE</button>
   				</form>
   			</td>
