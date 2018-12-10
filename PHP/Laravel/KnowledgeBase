@@ -1,0 +1,19 @@
+Composer is a dependecy manager
+https://teamtreehouse.com/community/what-is-a-dependency-or-package-manager
+
+Library - A collection of already pre-written code to make my life easier so I don't have to write everything from scratch
+
+Package - Collection of libraries that are built on each other or using each other one way or another
+
+Dependencies - Managing how these libraries are related to each other and which ones are essential to run the code. For example library "A" is using code from library "B" so I need both if I want to use codes from library "A".
+
+
+How to remove a project from laravel?
+rm -rf {{project folder name}}
+https://stackoverflow.com/questions/37251561/remove-delete-laravel-project
+
+To create project
+#dependency manager | command to make new project| preferred distribution| laravel's framework command| Project name
+composer create-project --prefer-dist laravel/laravel projectname
+https://appdividend.com/2018/02/01/laravel-tutorial-example-scratch/?bs-comment-added=1#Step_1_Installing_The_Laravel_Framework
+
