@@ -12,8 +12,20 @@ How to remove a project from laravel?
 rm -rf {{project folder name}}
 https://stackoverflow.com/questions/37251561/remove-delete-laravel-project
 
-To create project
+Steps to create a form:
+
+1. To create project
 #dependency manager | command to make new project| preferred distribution| laravel's framework command| Project name
 composer create-project --prefer-dist laravel/laravel projectname
 https://appdividend.com/2018/02/01/laravel-tutorial-example-scratch/?bs-comment-added=1#Step_1_Installing_The_Laravel_Framework
 
+2. Create new database in mysql: CREATE DATABASE dbname;
+
+3. Edit .env file in created project folder to include dbname.
+
+4. \q to exit mysql in command line. Then php artisan migrate to create tables users and passwordreset.
+
+5. Make form and create_forms_table migration file.
+
+Create a new Eloquent model class | migration file
+php artisan make:model nameofmodel -m
