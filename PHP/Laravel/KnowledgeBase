@@ -29,3 +29,11 @@ https://appdividend.com/2018/02/01/laravel-tutorial-example-scratch/?bs-comment-
 
 Create a new Eloquent model class | migration file
 php artisan make:model nameofmodel -m
+
+6. Create schema for forms table in database
+projectname-> database->migrations->create_forms_table
+add in $table->('name'); etc.
+
+Then php artisan migrate
+
+7.
