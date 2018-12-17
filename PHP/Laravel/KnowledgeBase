@@ -36,4 +36,5 @@ add in $table->('name'); etc.
 
 Then php artisan migrate
 
-7.
+7.Make a view to display the database created.
+resources-> views-> can choose to put into folder (optional) -> "Name of view".blade.php
