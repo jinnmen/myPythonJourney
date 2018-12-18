@@ -38,3 +38,11 @@ Then php artisan migrate
 
 7.Make a view to display the database created.
 resources-> views-> can choose to put into folder (optional) -> "Name of view".blade.php
+
+Blade {{ }} statements are automatically sent through PHP's htmlspecialchars function to prevent XSS attacks.
+https://laravel.com/docs/5.7/blade
+
+check forms-> create.blade.php
+
+8. Create controller and route to display form
+php artisan make:controller FormController --resource
