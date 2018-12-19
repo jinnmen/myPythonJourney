@@ -45,4 +45,14 @@ https://laravel.com/docs/5.7/blade
 check forms-> create.blade.php
 
 8. Create controller and route to display form
+Php artisan command | make:controller to create a new controller | name of controller | to define as resource controller
 php artisan make:controller FormController --resource
+
+https://laravel.com/docs/5.7/controllers#resource-controllers
+
+9. Next add the route in web.php:
+Route::resource('forms','FormController');
+
+At this step, still won't be able to view. 
+Need to 
+php artisan route:list
