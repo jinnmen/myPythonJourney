@@ -54,5 +54,28 @@ https://laravel.com/docs/5.7/controllers#resource-controllers
 Route::resource('forms','FormController');
 
 At this step, still won't be able to view. 
-Need to 
+
+Use below command to show table of connected route list (shows domain, method, URI, name, action, middleware)
 php artisan route:list
+
+Next in formcontroller.php , add into create():
+@return
+
+public function create()
+{
+    return view('forms.create);
+}
+
+Now the form would show.
+
+10. Validation
+
+In view -> create.blade.php 
+add in 
+<form method = "post" action = "{{url('forms')}}">
+
+Add security (under post line, only add once)
+{{csrf_field()}}
+
+need to include namespace in formcontroller.php
+use App\Form;
