@@ -71,7 +71,7 @@ Now the form would show.
 10. Validation
 
 In view -> create.blade.php 
-add in 
+add an action in:
 <form method = "post" action = "{{url('forms')}}">
 
 Add security (under post line, only add once)
@@ -79,3 +79,45 @@ Add security (under post line, only add once)
 
 need to include namespace in formcontroller.php
 use App\Form;
+
+Then add validation at the same place:
+    public function store(Request $request)
+    {
+        //
+        $request->validate([
+            'name' => 'required', //normal required validation
+            'email' => 'required|email|unique:ducks', //required and must be unique in ducks table
+            'password' => 'reqiured',
+            'password_confirm' => 'required|same:password',
+        ]);
+
+        $form = new Form();
+        $form-> name = $request -> get('name');
+        $form-> email = $request-> get('email');
+        $form-> password = $request-> get('password');
+        $form-> password_confirm = $request-> get('password_confirm');
+        $form-> phonenumber = $request-> get('phonenumber');
+        $form-> comments = $request-> get('comments');
+        $form -> save();
+        return redirect('forms')->with('success', 'Details have been added');
+    }
+
+If error, need to display. Hence add in code in create.blade.php below h2 tag in body:
+			@if ($errors->any())
+			<div class = "alert alert-danger"> <!-- bootstrap red alert message box-->
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div><br />
+			@endif
+			@if (\Session::has('success'))	
+			<div class = "alert alert-success"> <!-- bootstrap green alert message box-->
+				<p>{{ \Session::get('success') }}</p>
+			</div><br />
+			@endif
+			<form method="post" action = "{{url('forms')}}"> <!-- This method attribute of the form element tells the web browser to send form data to a server. Specifying a value of POST means the browser will send the data to the web server to be processed.-->
+			{{csrf_field()}}
+			
+
