@@ -13,6 +13,8 @@ Google Analytics API settings
 1. Set OATH 2 credentials
 https://console.cloud.google.com/apis/credentials?project=gsc-test-1&organizationId=158558707780
 
+Add in domain for where info needs to be pulled from
+
 How to:
 https://qiita.com/howdy39/items/cd01cbd3c1109e140fd0
 
@@ -21,6 +23,8 @@ https://developers.google.com/identity/protocols/googlescopes
 
 3. Use sample json to call API:
 https://developers.google.com/analytics/devguides/reporting/core/v4/samples
+
+Use own view ID
 
 4. convert json to csv :
 https://json-csv.com/
