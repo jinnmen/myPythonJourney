@@ -1,1 +1,26 @@
 https://stackify.com/rest-api-tutorial/
+
+https://www.digitalocean.com/community/tutorials/working-with-docker-containers
+
+To start docker again in next restart:
+1. Check container ID by typing "docker ps -a" to show all docker files in command line.
+2. Continuing in CMD, type "docker start containerID" . Wait for a few seconds for container to start.
+
+
+
+Google Analytics API settings
+
+1. Set OATH 2 credentials
+https://console.cloud.google.com/apis/credentials?project=gsc-test-1&organizationId=158558707780
+
+How to:
+https://qiita.com/howdy39/items/cd01cbd3c1109e140fd0
+
+2. Scope for Analytics API:
+https://developers.google.com/identity/protocols/googlescopes
+
+3. Use sample json to call API:
+https://developers.google.com/analytics/devguides/reporting/core/v4/samples
+
+4. convert json to csv :
+https://json-csv.com/
